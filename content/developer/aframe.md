@@ -30,7 +30,7 @@ for (let i = 0; i < len; i++) {
 Example:
 
 ```json
-mosquitto_pub -h arenaxr.org -t realm/s/example/duck_1 -m '{ "object_id" : "duck_1", "action": "update", "type": "object", "data": { "animation": { "property": "rotation", "to": "0 360 0", "loop": true, "dur": 10000 } } }'
+python3 -m arena -a pub -mh arenaxr.org -t realm/s/public/example/duck_1 -m '{ "object_id" : "duck_1", "action": "update", "type": "object", "data": { "animation": { "property": "rotation", "to": "0 360 0", "loop": true, "dur": 10000 } } }'
 ```
 
 {% include alert type="warning" title="Coming Soon" content="Stay tuned for more details..." %}

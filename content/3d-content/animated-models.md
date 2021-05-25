@@ -16,7 +16,7 @@ Animate rotation of the already drawn cube.
 Raw Message
 
 ```json
-mosquitto_pub -h arenaxr.org -t realm/s/example/cube_1 -m '{"object_id" : "cube_1", "action": "update", "type": "object", "data": { "animation": { "property": "rotation", "to": "0 360 0", "loop": true, "dur": 10000}} }'
+python3 -m arena -a pub -mh arenaxr.org -t realm/s/public/example/cube_1 -m '{"object_id" : "cube_1", "action": "update", "type": "object", "data": { "animation": { "property": "rotation", "to": "0 360 0", "loop": true, "dur": 10000}} }'
 ```
 
 Python
