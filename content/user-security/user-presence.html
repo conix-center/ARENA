@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>User Presence - ARENA Documentation</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>User Presence | ARENA Documentation</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="User Presence" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tutorials and Reference for the ARENA project." />
+<meta property="og:description" content="Tutorials and Reference for the ARENA project." />
+<link rel="canonical" href="https://arena.conix.io/content/user-security/user-presence.html" />
+<meta property="og:url" content="https://arena.conix.io/content/user-security/user-presence.html" />
+<meta property="og:site_name" content="ARENA Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="User Presence" />
+<script type="application/ld+json">
+{"description":"Tutorials and Reference for the ARENA project.","url":"https://arena.conix.io/content/user-security/user-presence.html","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arena.conix.io/xr-logo.png"}},"headline":"User Presence","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://arena.conix.io/" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://arena.conix.io/" class="nav-list-link">The ARENA</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/overview/" class="nav-list-link">Overview</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/user-guide.html" class="nav-list-link">First Time in the ARENA</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/build.html" class="nav-list-link">Build Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/dev-guide.html" class="nav-list-link">Develop Python Programs</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/screenshare.html" class="nav-list-link">ARENA Screenshare</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/next.html" class="nav-list-link">Next Steps</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/pubsub.html" class="nav-list-link">MQTT</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/platforms.html" class="nav-list-link">Cross Platform Support</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/coordinate-frame.html" class="nav-list-link">Coordinate Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/source.html" class="nav-list-link">Source and Links</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/messaging/" class="nav-list-link">Messaging Format</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/examples.html" class="nav-list-link">Examples</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/definitions.html" class="nav-list-link">JSON Spec</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/arena-aframe-components.html" class="nav-list-link">ARENA A-Frame Components</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/python/" class="nav-list-link">Python Library</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/python/scenes.html" class="nav-list-link">Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/objects.html" class="nav-list-link">Objects</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/attributes.html" class="nav-list-link">Attributes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/events.html" class="nav-list-link">Events</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/tasks.html" class="nav-list-link">Tasks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/callbacks.html" class="nav-list-link">Scene Callbacks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/animations.html" class="nav-list-link">Animations and Morphs</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/3d-content/" class="nav-list-link">3D Content</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/unity.html" class="nav-list-link">Exporting from Unity</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/gltf-files.html" class="nav-list-link">GLTF Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/downscaling.html" class="nav-list-link">Downscaling Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/dimension.html" class="nav-list-link">Converting SketchUp Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/animated-models.html" class="nav-list-link">Animated Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/mesh-nav.html" class="nav-list-link">Navigation Meshes</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/localization/" class="nav-list-link">Localization & Tracking</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optitrack.html" class="nav-list-link">Opititrack</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optical-markers.html" class="nav-list-link">Optical Markers</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/uwb.html" class="nav-list-link">UWB</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/user-security/" class="nav-list-link">Users & Security</a><ul class="nav-list "><li class="nav-list-item  active"><a href="https://arena.conix.io/content/user-security/user-presence.html" class="nav-list-link active">User Presence</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-account.html" class="nav-list-link">User Account</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/security.html" class="nav-list-link">Security</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/tools/" class="nav-list-link">Tools</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/persistence.html" class="nav-list-link">Persistence DB</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/localizer.html" class="nav-list-link">Localizer</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/filestore.html" class="nav-list-link">File Store</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/authoring.html" class="nav-list-link">Authoring Program</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/atlas.html" class="nav-list-link">ATLAS</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/params.html" class="nav-list-link">URL Parameters</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/arts/" class="nav-list-link">ARENA Runtime Supervisor</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/mqtt-broker.html" class="nav-list-link">MQTT Broker</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/runtime.html" class="nav-list-link">Runtime</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/python.html" class="nav-list-link">Program Launch Example</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/developer/" class="nav-list-link">Developers</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/threejs.html" class="nav-list-link">Three.js</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/aframe.html" class="nav-list-link">A-Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="https://arena.conix.io/content/troubleshooting.html" class="nav-list-link">Troubleshooting</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ARENA Documentation" aria-label="Search ARENA Documentation" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://arenaxr.org/" class="site-button"
+                  
+                >
+                  The ARENA
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://conix.io/arena" class="site-button"
+                  
+                >
+                  CONIX Research Center
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/conix-center/" class="site-button"
+                  
+                >
+                  Our GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://arena.conix.io/content/user-security/">Users & Security</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>User Presence</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h1 id="arena-user-presence">
+        
+        
+          <a href="#arena-user-presence" class="anchor-heading" aria-labelledby="arena-user-presence"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ARENA User Presence
+        
+        
+      </h1>
+    
+
+<p>Users in the ARENA are represented to each other in a 3d scene with an avatar. Your default user avatar looks like a static 3d floating head model with your chosen display name above the head, and a muted microphone icon. Wherever you choose to move or look within a scene is where other users will see your avatar move or look.</p>
+      <h2 id="audiovideo-setup">
+        
+        
+          <a href="#audiovideo-setup" class="anchor-heading" aria-labelledby="audiovideo-setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Audio/Video Setup
+        
+        
+      </h2>
+    
+
+<p>Upon entering a scene you will see a panel for audio and video setup. Here you can <code class="language-plaintext highlighter-rouge">Select Camera</code>, <code class="language-plaintext highlighter-rouge">Speakers</code>, or <code class="language-plaintext highlighter-rouge">Microphone</code> to use, test your devices to make sure they are working, and adjust your display name.</p>
+
+<div class="alert-box alert-tip" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          tip
+        
+        
+      </h4>
+    
+    <p>If you are having trouble, the <code class="language-plaintext highlighter-rouge">Test Browser</code> button is a good place to find out if your hardware is compatible with the <a href="https://test.webrtc.org">WebRTC protocol</a> we use for video conferencing.</p>
+
+</div>
+
+<!-- TODO: image a/v setup -->
+      <h2 id="user-display-name">
+        
+        
+          <a href="#user-display-name" class="anchor-heading" aria-labelledby="user-display-name"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> User Display Name
+        
+        
+      </h2>
+    
+
+<p><img src="/assets/img/icons/more.png" alt="" height="32px" width="32px" />
+The display name you choose, will be displayed in random colored text above your user avatar. In an ARENA Scene, you can change your display text by clicking the last right-hand arrow “V” icon to show the <code class="language-plaintext highlighter-rouge">Settings</code> panel, which provides a <code class="language-plaintext highlighter-rouge">Display Name</code> input box you can change to what you wish.</p>
+
+<p><img src="/assets/img/overview/userguide/name.png" width="50%" /></p>
+      <h2 id="user-video">
+        
+        
+          <a href="#user-video" class="anchor-heading" aria-labelledby="user-video"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> User Video
+        
+        
+      </h2>
+    
+
+<p><img src="/assets/img/icons/video-on.png" alt="" height="32px" width="32px" />
+If you click the camera icon, you will begin to send video to other users. The video you are sending to other users will appear in the upper left corner of the screen. If your scene is enabled to use the facial recognition feature, you can click the recognition avatar icon and you will see the facial feature points recognized in the upper left corner of your screen.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>User Avatar</th>
+      <th>Image</th>
+      <th>Camera</th>
+      <th>Video Sent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Static 3d head</strong> <em>(default)</em></td>
+      <td>TBD</td>
+      <td>Off</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Facial recognition 3d head</strong></td>
+      <td>TBD</td>
+      <td>On</td>
+      <td>No video, only facial feature points</td>
+    </tr>
+    <tr>
+      <td><strong>Video cube</strong></td>
+      <td>TBD</td>
+      <td>On</td>
+      <td>Camera video</td>
+    </tr>
+    <tr>
+      <td><strong>Black cube</strong></td>
+      <td>TBD</td>
+      <td>On</td>
+      <td>Camera video error, only black frames</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="alert-box alert-warning" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          Warning
+        
+        
+      </h4>
+    
+    <p>Camera input is not available on all mobile device/browser combinations.</p>
+
+</div>
+
+<!-- TODO: add images of all avatars -->
+      <h2 id="user-audio">
+        
+        
+          <a href="#user-audio" class="anchor-heading" aria-labelledby="user-audio"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> User Audio
+        
+        
+      </h2>
+    
+
+<p><img src="/assets/img/icons/audio-on.png" alt="" height="32px" width="32px" />
+If you click the microphone icon, you will begin to send audio to other users. When you have your microphone turned off, other users will see a muted microphone icon over your avatar. Our audio support includes a number of features. Depending on the range between you and other users’ avatars, you may experience louder sounds the closer you are to them, depending which side of you they are speaking from, and if they are far enough away from you to cutoff the audio completely.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>User Audio</th>
+      <th>User Range</th>
+      <th>Microphone</th>
+      <th>Audio Sent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Muted Head Icon</strong></td>
+      <td>all</td>
+      <td>Off</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Directional Audio</strong></td>
+      <td>0-20m</td>
+      <td>On</td>
+      <td>Audio is in stereo by avatar pose</td>
+    </tr>
+    <tr>
+      <td><strong>Spatial Audio</strong></td>
+      <td>0-20m</td>
+      <td>On</td>
+      <td>Audio fades with distance</td>
+    </tr>
+    <tr>
+      <td><strong>Cutoff Audio</strong></td>
+      <td>&gt; 20m</td>
+      <td>On</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="user-pose">
+        
+        
+          <a href="#user-pose" class="anchor-heading" aria-labelledby="user-pose"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> User Pose
+        
+        
+      </h2>
+    
+
+<p>By default the ARENA shows your location as a 3d model of a head, with your nose at your position coordinates. The <strong>pose</strong> of a user is comprised of the user’s <strong>position</strong> (location) and <strong>rotation</strong> (gaze) in the 3d world of the ARENA. Depending on the XR view and hardware you use, your pose may be determined by a number of differing sensors.</p>
+
+<!-- TODO: add images of AR/VR buttons -->
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>XR View</th>
+      <th>Rotation Sensor</th>
+      <th>Position Sensor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>VR Desktop</strong></td>
+      <td>Keyboard/Mouse</td>
+      <td>Keyboard</td>
+    </tr>
+    <tr>
+      <td><strong>VR Phone/Tablet</strong></td>
+      <td>Touchscreen</td>
+      <td>Touchscreen</td>
+    </tr>
+    <tr>
+      <td><strong>VR Headset/Glasses</strong> <em>(VR button)</em></td>
+      <td>Accelerometer</td>
+      <td>———</td>
+    </tr>
+    <tr>
+      <td><strong>AR Phone/Tablet</strong> <em>(AR button)</em></td>
+      <td>Accelerometer</td>
+      <td>Accelerometer/Camera</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="facial-recognition-avatar">
+        
+        
+          <a href="#facial-recognition-avatar" class="anchor-heading" aria-labelledby="facial-recognition-avatar"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Facial Recognition Avatar
+        
+        
+      </h2>
+    
+
+<p><img src="/assets/img/icons/avatar3-on.png" alt="" height="32px" width="32px" />
+Your ARENA scene may have the capability to use facial recognition to recognize your facial feature points from your camera and present a generic 3d head which will move its eyes, eyebrows, mouth and lips as you do. Only other users will see the 3d rendering of your avatar.</p>
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/RorgGVWEIdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</figure>
+      <h2 id="screen-sharing">
+        
+        
+          <a href="#screen-sharing" class="anchor-heading" aria-labelledby="screen-sharing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Screen Sharing
+        
+        
+      </h2>
+    
+
+<p><img src="/assets/img/icons/screen-on.png" alt="" height="32px" width="32px" />
+When you click and accept the screenshare icon and popup, it will ask for the object name/ID of the object you want to screen share on (defaulted to an object with <code class="language-plaintext highlighter-rouge">object_id</code>: <code class="language-plaintext highlighter-rouge">screenshare</code>, which is dynamically created if it doesn’t exist already).</p>
+
+<ul>
+  <li>See our <a href="/content/overview/screenshare">Screenshare Walkthrough</a> for more detail.</li>
+</ul>
+      <h2 id="vive-laser-controls">
+        
+        
+          <a href="#vive-laser-controls" class="anchor-heading" aria-labelledby="vive-laser-controls"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vive (laser) controls
+        
+        
+      </h2>
+    
+
+<div class="alert-box alert-danger" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          Out of Date
+        
+        
+      </h4>
+    
+    <p>We have some support for VR Vive hand controls in the ARENA, but these instructions may be out of date.</p>
+
+</div>
+
+<p>We’ve noticed the controllers don’t show up in the scene unless they both <strong>and EVERYTHING else for SteamVR</strong> are all working (headset, lighthouses). And sometimes you have to restart SteamVR for hand controllers to show up in the scene; even though SteamVR shows them as being working/on/available/etc. It’s possible to open VR mode in an ARENA scene and be missing the hand controls.</p>
+
+<p>By default we use A-Frame <code class="language-plaintext highlighter-rouge">laser-controls</code> which default to showing Valve Index controller 3D models (gray, circular), even if we are using (equivalent) Vive controllers (black, paddle shaped, not included in the list of controllers known to A-Frame).</p>
+      <h2 id="camera-perspective">
+        
+        
+          <a href="#camera-perspective" class="anchor-heading" aria-labelledby="camera-perspective"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Camera Perspective
+        
+        
+      </h2>
+    
+
+<p>(from <a href="https://aframe.io/docs/1.0.0/components/camera.html">A-Frame documentation</a>)</p>
+
+<div class="table-wrapper"><table>
+  <tbody>
+    <tr>
+      <td>The camera component defines from which perspective the user views the scene. The camera is commonly paired with controls components that allow input devices to move and rotate the camera.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="table-wrapper"><table>
+  <tbody>
+    <tr>
+      <td>A camera should usually be positioned at the average height of human eye level (1.6 meters). When used with controls that receive rotation or position (e.g. from a VR device) this position will be overridden.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a-entity</span> <span class="na">camera</span> <span class="na">look-controls</span> <span class="na">position=</span><span class="s">"0 1.6 0"</span><span class="nt">&gt;&lt;/a-entity&gt;</span>
+</code></pre></div></div>
+
+<p>The above example puts the camera at a position in the scene, but sure enough, when we use a tablet with WebXRViewer or a VR or AR headset, these values are overwritten. <strong>In fact</strong>, it turns out that from a desktop browser, at the start of our A-Frame session, regardless of the values set in the HTML above, the start position is set to (0, 1.6, 0). It was misleading that the HTML definition just happened to match. Our code sets it to (0,0,0) in the declaration. It gets more interesting: on a tablet or phone, the start position again gets overridden <strong>by (0,0,0) this time!</strong></p>
+
+<div class="table-wrapper"><table>
+  <tbody>
+    <tr>
+      <td>When moving or rotating the camera relative to the scene, use a camera rig. By doing so, the camera’s height offset can be updated by room-scale devices, while still allowing the tracked area to be moved independently around the scene.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a-entity</span> <span class="na">id=</span><span class="s">"rig"</span> <span class="na">position=</span><span class="s">"25 10 0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a-entity</span> <span class="na">id=</span><span class="s">"camera"</span> <span class="na">camera</span> <span class="na">look-controls</span><span class="nt">&gt;&lt;/a-entity&gt;</span>
+<span class="nt">&lt;/a-entity&gt;</span>
+</code></pre></div></div>
+
+        
+
+        
+
+        
+          <hr>
+          <footer>
+            
+            
+              <p class="text-small text-grey-dk-000 mb-0">Copyright &copy; 2020-2021, CONIX Research Center</p>
+            
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

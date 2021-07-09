@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Messaging Format - ARENA Documentation</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Messaging Format | ARENA Documentation</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Messaging Format" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tutorials and Reference for the ARENA project." />
+<meta property="og:description" content="Tutorials and Reference for the ARENA project." />
+<link rel="canonical" href="https://arena.conix.io/content/messaging/" />
+<meta property="og:url" content="https://arena.conix.io/content/messaging/" />
+<meta property="og:site_name" content="ARENA Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Messaging Format" />
+<script type="application/ld+json">
+{"description":"Tutorials and Reference for the ARENA project.","url":"https://arena.conix.io/content/messaging/","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arena.conix.io/xr-logo.png"}},"headline":"Messaging Format","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://arena.conix.io/" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://arena.conix.io/" class="nav-list-link">The ARENA</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/overview/" class="nav-list-link">Overview</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/user-guide.html" class="nav-list-link">First Time in the ARENA</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/build.html" class="nav-list-link">Build Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/dev-guide.html" class="nav-list-link">Develop Python Programs</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/screenshare.html" class="nav-list-link">ARENA Screenshare</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/next.html" class="nav-list-link">Next Steps</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/pubsub.html" class="nav-list-link">MQTT</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/platforms.html" class="nav-list-link">Cross Platform Support</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/coordinate-frame.html" class="nav-list-link">Coordinate Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/source.html" class="nav-list-link">Source and Links</a></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/messaging/" class="nav-list-link active">Messaging Format</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/examples.html" class="nav-list-link">Examples</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/definitions.html" class="nav-list-link">JSON Spec</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/arena-aframe-components.html" class="nav-list-link">ARENA A-Frame Components</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/python/" class="nav-list-link">Python Library</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/python/scenes.html" class="nav-list-link">Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/objects.html" class="nav-list-link">Objects</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/attributes.html" class="nav-list-link">Attributes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/events.html" class="nav-list-link">Events</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/tasks.html" class="nav-list-link">Tasks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/callbacks.html" class="nav-list-link">Scene Callbacks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/animations.html" class="nav-list-link">Animations and Morphs</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/3d-content/" class="nav-list-link">3D Content</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/unity.html" class="nav-list-link">Exporting from Unity</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/gltf-files.html" class="nav-list-link">GLTF Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/downscaling.html" class="nav-list-link">Downscaling Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/dimension.html" class="nav-list-link">Converting SketchUp Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/animated-models.html" class="nav-list-link">Animated Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/mesh-nav.html" class="nav-list-link">Navigation Meshes</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/localization/" class="nav-list-link">Localization & Tracking</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optitrack.html" class="nav-list-link">Opititrack</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optical-markers.html" class="nav-list-link">Optical Markers</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/uwb.html" class="nav-list-link">UWB</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/user-security/" class="nav-list-link">Users & Security</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-presence.html" class="nav-list-link">User Presence</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-account.html" class="nav-list-link">User Account</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/security.html" class="nav-list-link">Security</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/tools/" class="nav-list-link">Tools</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/persistence.html" class="nav-list-link">Persistence DB</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/localizer.html" class="nav-list-link">Localizer</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/filestore.html" class="nav-list-link">File Store</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/authoring.html" class="nav-list-link">Authoring Program</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/atlas.html" class="nav-list-link">ATLAS</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/params.html" class="nav-list-link">URL Parameters</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/arts/" class="nav-list-link">ARENA Runtime Supervisor</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/mqtt-broker.html" class="nav-list-link">MQTT Broker</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/runtime.html" class="nav-list-link">Runtime</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/python.html" class="nav-list-link">Program Launch Example</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/developer/" class="nav-list-link">Developers</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/threejs.html" class="nav-list-link">Three.js</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/aframe.html" class="nav-list-link">A-Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="https://arena.conix.io/content/troubleshooting.html" class="nav-list-link">Troubleshooting</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ARENA Documentation" aria-label="Search ARENA Documentation" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://arenaxr.org/" class="site-button"
+                  
+                >
+                  The ARENA
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://conix.io/arena" class="site-button"
+                  
+                >
+                  CONIX Research Center
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/conix-center/" class="site-button"
+                  
+                >
+                  Our GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h1 id="messaging-format-overview">
+        
+        
+          <a href="#messaging-format-overview" class="anchor-heading" aria-labelledby="messaging-format-overview"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Messaging Format Overview
+        
+        
+      </h1>
+    
+
+<div class="alert-box alert-warning" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          Warning
+        
+        
+      </h4>
+    
+    <p>The code examples below are currently out of date and are being updated…</p>
+
+</div>
+
+<p>Render 3d content in AFrame from MQTT messages</p>
+<ul>
+  <li><a href="https://github.com/conix-center/ARENA-core"><strong>ARENA-core</strong></a> webserver repository</li>
+</ul>
+      <h2 id="general-purpose-aframe-using-subtopics">
+        
+        
+          <a href="#general-purpose-aframe-using-subtopics" class="anchor-heading" aria-labelledby="general-purpose-aframe-using-subtopics"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> General Purpose AFrame using Subtopics
+        
+        
+      </h2>
+    
+<p>Most of ARENA’s MQTT messages take JSON data where x,y,z (location in meters), x,y,z,w (rotation in quaternions), x,y,z (scale factor where 1=100%).
+If you leave out any of these, defaults will be used: location(0,0,0), rotation(0,0,0,1), scale(1,1,1), color(white). Another general setting is whether or not to persist an object to the ARENA scene database, determined by <code class="language-plaintext highlighter-rouge">"persist": true</code>.</p>
+
+<p><img src="/assets/img/messaging/arena-obj.png" alt="ARENA JSON Format" /></p>
+      <h2 id="sample-scene-earth-and-moon-with-markers">
+        
+        
+          <a href="#sample-scene-earth-and-moon-with-markers" class="anchor-heading" aria-labelledby="sample-scene-earth-and-moon-with-markers"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Sample scene: Earth and Moon with Markers
+        
+        
+      </h2>
+    
+<p>MQTT messages that define the scene:</p>
+      <h3 id="create-models">
+        
+        
+          <a href="#create-models" class="anchor-heading" aria-labelledby="create-models"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Create models
+        
+        
+      </h3>
+    
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/gltf-model_Earth</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model_Earth"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model"</span><span class="p">,</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"store/models/Earth.glb"</span><span class="p">,</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">}}}</span><span class="err">'</span><span class="w">
+</span><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/gltf-model_Moon</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model_Moon"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"parent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model_Earth"</span><span class="p">,</span><span class="w"> </span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model"</span><span class="p">,</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6</span><span class="p">},</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="mf">0.05</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05</span><span class="p">},</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"store/models/Moon.glb"</span><span class="w"> </span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="define-animation-and-movement">
+        
+        
+          <a href="#define-animation-and-movement" class="anchor-heading" aria-labelledby="define-animation-and-movement"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Define animation and movement
+        
+        
+      </h3>
+    
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/gltf-model_Earth</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model_Earth"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"animation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rotation"</span><span class="p">,</span><span class="w"> </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0 360 0"</span><span class="p">,</span><span class="w"> </span><span class="nl">"loop"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nl">"dur"</span><span class="p">:</span><span class="w"> </span><span class="mi">20000</span><span class="p">,</span><span class="w"> </span><span class="nl">"easing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"linear"</span><span class="p">}}</span><span class="w"> </span><span class="p">}</span><span class="err">'</span><span class="w">
+</span><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/gltf-model_Earth</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model_Earth"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"startEvents"</span><span class="p">:</span><span class="w"> </span><span class="s2">"click"</span><span class="p">,</span><span class="w"> </span><span class="nl">"property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scale"</span><span class="p">,</span><span class="w"> </span><span class="nl">"dur"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10 10 10"</span><span class="p">,</span><span class="w"> </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5 5 5"</span><span class="p">,</span><span class="w"> </span><span class="nl">"easing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"easeInOutCirc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"loop"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nl">"dir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alternate"</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="err">'</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="add-a-click-listener">
+        
+        
+          <a href="#add-a-click-listener" class="anchor-heading" aria-labelledby="add-a-click-listener"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Add a click-listener
+        
+        
+      </h3>
+    
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/gltf-model_Earth</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"gltf-model_Earth"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"click-listener"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="create-marker-objects">
+        
+        
+          <a href="#create-marker-objects" class="anchor-heading" aria-labelledby="create-marker-objects"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Create marker objects
+        
+        
+      </h3>
+    
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/box</span><span class="mi">0</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"box0"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">,</span><span class="w"> </span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube"</span><span class="p">,</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">},</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}</span><span class="w"> </span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/box</span><span class="mi">1</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"box1"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube"</span><span class="p">,</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">},</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.7</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.67</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.11</span><span class="p">}</span><span class="w"> </span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/box</span><span class="mi">2</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"box2"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube"</span><span class="p">,</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">},</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-2.88</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.80</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">-2.12</span><span class="p">}</span><span class="w"> </span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/box</span><span class="mi">3</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"box3"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube"</span><span class="p">,</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">},</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.09</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.30</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">-3.66</span><span class="p">}</span><span class="w"> </span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span><span class="err">mosquitto_pub</span><span class="w"> </span><span class="err">-h</span><span class="w"> </span><span class="err">arenaxr.org</span><span class="w"> </span><span class="err">-t</span><span class="w"> </span><span class="err">realm/s/example/box</span><span class="mi">4</span><span class="w"> </span><span class="err">-m</span><span class="w"> </span><span class="err">'</span><span class="p">{</span><span class="nl">"object_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"box4"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube"</span><span class="p">,</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="p">},</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.31</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.00</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.97</span><span class="p">}</span><span class="w"> </span><span class="p">}}</span><span class="err">'</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="results">
+        
+        
+          <a href="#results" class="anchor-heading" aria-labelledby="results"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Results
+        
+        
+      </h3>
+    
+<div class="alert-box alert-warning" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          TODO
+        
+        
+      </h4>
+    
+    <p>Include awesome demo result from design doc.</p>
+
+</div>
+
+        
+
+        
+          <hr>
+          <h2 class="text-delta">Table of contents</h2>
+          <ul>
+              <li>
+                <a href="https://arena.conix.io/content/messaging/examples.html">Examples</a>
+              </li>
+            
+              <li>
+                <a href="https://arena.conix.io/content/messaging/definitions.html">JSON Spec</a>
+              </li>
+            
+              <li>
+                <a href="https://arena.conix.io/content/messaging/arena-aframe-components.html">ARENA A-Frame Components</a>
+              </li>
+            
+          </ul>
+        
+
+        
+          <hr>
+          <footer>
+            
+            
+              <p class="text-small text-grey-dk-000 mb-0">Copyright &copy; 2020-2021, CONIX Research Center</p>
+            
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

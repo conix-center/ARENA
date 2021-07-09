@@ -1,0 +1,1741 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>ARENA A-Frame Components - ARENA Documentation</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>ARENA A-Frame Components | ARENA Documentation</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="ARENA A-Frame Components" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tutorials and Reference for the ARENA project." />
+<meta property="og:description" content="Tutorials and Reference for the ARENA project." />
+<link rel="canonical" href="https://arena.conix.io/content/messaging/arena-aframe-components.html" />
+<meta property="og:url" content="https://arena.conix.io/content/messaging/arena-aframe-components.html" />
+<meta property="og:site_name" content="ARENA Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ARENA A-Frame Components" />
+<script type="application/ld+json">
+{"description":"Tutorials and Reference for the ARENA project.","url":"https://arena.conix.io/content/messaging/arena-aframe-components.html","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arena.conix.io/xr-logo.png"}},"headline":"ARENA A-Frame Components","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://arena.conix.io/" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://arena.conix.io/" class="nav-list-link">The ARENA</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/overview/" class="nav-list-link">Overview</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/user-guide.html" class="nav-list-link">First Time in the ARENA</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/build.html" class="nav-list-link">Build Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/dev-guide.html" class="nav-list-link">Develop Python Programs</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/screenshare.html" class="nav-list-link">ARENA Screenshare</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/next.html" class="nav-list-link">Next Steps</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/pubsub.html" class="nav-list-link">MQTT</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/platforms.html" class="nav-list-link">Cross Platform Support</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/coordinate-frame.html" class="nav-list-link">Coordinate Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/source.html" class="nav-list-link">Source and Links</a></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/messaging/" class="nav-list-link">Messaging Format</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/examples.html" class="nav-list-link">Examples</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/definitions.html" class="nav-list-link">JSON Spec</a></li><li class="nav-list-item  active"><a href="https://arena.conix.io/content/messaging/arena-aframe-components.html" class="nav-list-link active">ARENA A-Frame Components</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/python/" class="nav-list-link">Python Library</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/python/scenes.html" class="nav-list-link">Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/objects.html" class="nav-list-link">Objects</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/attributes.html" class="nav-list-link">Attributes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/events.html" class="nav-list-link">Events</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/tasks.html" class="nav-list-link">Tasks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/callbacks.html" class="nav-list-link">Scene Callbacks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/animations.html" class="nav-list-link">Animations and Morphs</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/3d-content/" class="nav-list-link">3D Content</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/unity.html" class="nav-list-link">Exporting from Unity</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/gltf-files.html" class="nav-list-link">GLTF Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/downscaling.html" class="nav-list-link">Downscaling Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/dimension.html" class="nav-list-link">Converting SketchUp Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/animated-models.html" class="nav-list-link">Animated Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/mesh-nav.html" class="nav-list-link">Navigation Meshes</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/localization/" class="nav-list-link">Localization & Tracking</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optitrack.html" class="nav-list-link">Opititrack</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optical-markers.html" class="nav-list-link">Optical Markers</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/uwb.html" class="nav-list-link">UWB</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/user-security/" class="nav-list-link">Users & Security</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-presence.html" class="nav-list-link">User Presence</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-account.html" class="nav-list-link">User Account</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/security.html" class="nav-list-link">Security</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/tools/" class="nav-list-link">Tools</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/persistence.html" class="nav-list-link">Persistence DB</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/localizer.html" class="nav-list-link">Localizer</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/filestore.html" class="nav-list-link">File Store</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/authoring.html" class="nav-list-link">Authoring Program</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/atlas.html" class="nav-list-link">ATLAS</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/params.html" class="nav-list-link">URL Parameters</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/arts/" class="nav-list-link">ARENA Runtime Supervisor</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/mqtt-broker.html" class="nav-list-link">MQTT Broker</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/runtime.html" class="nav-list-link">Runtime</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/python.html" class="nav-list-link">Program Launch Example</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/developer/" class="nav-list-link">Developers</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/threejs.html" class="nav-list-link">Three.js</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/aframe.html" class="nav-list-link">A-Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="https://arena.conix.io/content/troubleshooting.html" class="nav-list-link">Troubleshooting</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ARENA Documentation" aria-label="Search ARENA Documentation" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://arenaxr.org/" class="site-button"
+                  
+                >
+                  The ARENA
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://conix.io/arena" class="site-button"
+                  
+                >
+                  CONIX Research Center
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/conix-center/" class="site-button"
+                  
+                >
+                  Our GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://arena.conix.io/content/messaging/">Messaging Format</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>ARENA A-Frame Components</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h1 id="arena-specific-a-frame-components">
+        
+        
+          <a href="#arena-specific-a-frame-components" class="anchor-heading" aria-labelledby="arena-specific-a-frame-components"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ARENA Specific A-Frame Components
+        
+        
+      </h1>
+    
+
+<p>These are the A-Frame components and systems added to support ARENA core functionality.</p>
+      <h2 id="componentssystems">
+        
+        
+          <a href="#componentssystems" class="anchor-heading" aria-labelledby="componentssystems"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Components/Systems
+        
+        
+      </h2>
+    
+
+<dl>
+<dt><a href="#module_arena-camera">arena-camera</a></dt>
+<dd><p>Tracking camera movement in real time. Emits camera pose change and VIO change events.</p>
+</dd>
+<dt><a href="#module_arena-user">arena-user</a></dt>
+<dd><p>Another user&#39;s camera in the ARENA. Handles Jitsi and display name updates.</p>
+</dd>
+<dt><a href="#module_arena-vive">arena-vive</a></dt>
+<dd><p>Tracking Vive controller movement in real time.</p>
+</dd>
+<dt><a href="#module_armarker-system">armarker-system</a></dt>
+<dd><p>ARMarker System. Supports ARMarkers in a scene.</p>
+</dd>
+<dt><a href="#module_armarker">armarker</a></dt>
+<dd><p>ARMarker Component. Supports ARMarkers in a scene</p>
+</dd>
+<dt><a href="#module_attribution-system">attribution-system</a></dt>
+<dd><p>Attribution Component/System. Add attribution message to any entity.
+Tries to extract author, license, source and title (assuming format used in sketchfab downloaded models)</p>
+<p>Looks for authorship metadata in both asset.extras (sketchfab models) and scene.extra (manually added attributes in blender).
+If both asset.extras and scene.extra exist, gives preference to asset.extras.</p>
+</dd>
+<dt><a href="#module_attribution">attribution</a></dt>
+<dd><p>Attribution Component. Saves attribution data in any entity. The following properties can be saved.
+If <code>extractAssetExtras=true</code> (default), the <a href="https://help.sketchfab.com/hc/en-us/articles/202512396-Model-Properties">attribution system</a> attempts to extract data automatically from the model (requires models with authorship metadata; e.g. models downloaded from sketchfab have these data)</p>
+</dd>
+<dt><a href="#module_click-listener">click-listener</a></dt>
+<dd><p>Keep track of mouse events and publish corresponding events</p>
+</dd>
+<dt><a href="#module_collision-listener">collision-listener</a></dt>
+<dd><p>Listen for collisions, callback on event.
+Requires <a href="https://github.com/n5ro/aframe-physics-system">Physics for A-Frame VR</a></p>
+</dd>
+<dt><a href="#module_gesture-detector">gesture-detector</a></dt>
+<dd><p>Detect multi-finger touch gestures. Publish events accordingly.
+Based off 8th Wall&#39;s <a href="https://github.com/8thwall/web/tree/master/examples/aframe">gesture-detector</a></p>
+</dd>
+<dt><a href="#module_gltf-model-progress">gltf-model-progress</a></dt>
+<dd><p>GLTF model loading progress system. Manage GLTF load messages.</p>
+</dd>
+<dt><a href="#module_goto-url">goto-url</a></dt>
+<dd><p>Load new URL when object is clicked</p>
+</dd>
+<dt><a href="#module_hide-in-ar-mode">hide-in-ar-mode</a></dt>
+<dd><p>Hide in AR component. When set to an entity, it will make the entity disappear when entering AR mode.
+Based on <a href="https://github.com/aframevr/aframe/pull/4356">this example</a></p>
+</dd>
+<dt><a href="#module_impulse">impulse</a></dt>
+<dd><p>One physics feature is applying an impulse to an object to set it in motion.
+This happens in conjunction with an event.
+Requires <a href="https://github.com/n5ro/aframe-physics-system">Physics for A-Frame VR</a></p>
+</dd>
+<dt><a href="#module_jitsi-video">jitsi-video</a></dt>
+<dd><p>Apply a jitsi video to a geometry
+Jitsi video source can be defined using a jitsiId or (ARENA/Jitsi) display name</p>
+</dd>
+<dt><a href="#module_landmark">landmark</a></dt>
+<dd><p>Component-System of teleport destination Landmarks</p>
+</dd>
+<dt><a href="#module_load-scene">load-scene</a></dt>
+<dd><p>Load scene from persistence.</p>
+</dd>
+<dt><a href="#module_material-extras">material-extras</a></dt>
+<dd><p>Allows to set extra material properties, namely texture encoding, whether to render the material&#39;s color and render order.
+The properties set here access directly <a href="https://threejs.org/docs/#api/en/materials/Material">Three.js material</a>.
+Implements a timeout scheme in lack of better understanding of the timing/events causing properties to not be available.</p>
+</dd>
+<dt><a href="#module_network-latency">network-latency</a></dt>
+<dd><p>Publish with qos of 2 for network graph to update latency</p>
+</dd>
+<dt><a href="#module_press-and-move">press-and-move</a></dt>
+<dd><p>Press and move camera; User camera movement with the mouse.
+Based off <a href="https://github.com/aframevr/aframe/blob/master/src/components/wasd-controls.js">wasd controls</a></p>
+</dd>
+<dt><a href="#module_screenshareable">screenshareable</a></dt>
+<dd><p>Screenshare-able Component. Allows an object to be screenshared upon</p>
+</dd>
+<dt><a href="#module_textinput">textinput</a></dt>
+<dd><p>Opens an HTML prompt when clicked. Sends text input as an event on MQTT</p>
+</dd>
+<dt><a href="#module_threejs-scene">threejs-scene</a></dt>
+<dd><p>Load a <a href="https://threejs.org/docs/#api/en/scenes/Scene">THREE.js scene</a>. THREE.js scene format is an almost direct serialization of the THREE.js objects, and can be THREE.js version-specific; you can see THREE.js version in the JS console once you open ARENA
+For a move portable format, using glTF is preferred.</p>
+</dd>
+<dt><a href="#module_ttl">ttl</a></dt>
+<dd><p>Time To Live (TTL) component.</p>
+<p>When applied to an entity, the entity will remove itself from DOM after the specified number of seconds.
+Update <em>is</em> allowed, which will reset the timer to start from that moment.</p>
+</dd>
+<dt><a href="#module_video-control">video-control</a></dt>
+<dd><p>Adds a video to an entity and controls its playback.</p>
+</dd>
+</dl>
+
+<p><a name="module_arena-camera"></a></p>
+      <h2 id="arena-camera">
+        
+        
+          <a href="#arena-camera" class="anchor-heading" aria-labelledby="arena-camera"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> arena-camera
+        
+        
+      </h2>
+    
+<p>Tracking camera movement in real time. Emits camera pose change and VIO change events.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>enabled</td>
+      <td><code>boolean</code></td>
+      <td> </td>
+      <td>Indicates whether camera tracking is enabled.</td>
+    </tr>
+    <tr>
+      <td>vioEnabled</td>
+      <td><code>boolean</code></td>
+      <td> </td>
+      <td>Indicates whether to publish VIO on every tick (if true).</td>
+    </tr>
+    <tr>
+      <td>displayName</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>User display name (used to publish camera data).</td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>Head text color.</td>
+    </tr>
+    <tr>
+      <td>[headModel]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;&#x27;robobit&#x27;&quot;</code></td>
+      <td>Builtin head model (one of: ‘robobit’, ‘grey-head’)</td>
+    </tr>
+    <tr>
+      <td>[videoShape]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;&#x27;default-box&#x27;&quot;</code></td>
+      <td>Builtin video shape (one of: ‘default-box’, ‘flat-box’)</td>
+    </tr>
+    <tr>
+      <td>rotation</td>
+      <td><code>Array.&lt;number&gt;</code></td>
+      <td> </td>
+      <td>Last camera rotation value.</td>
+    </tr>
+    <tr>
+      <td>position</td>
+      <td><code>Array.&lt;number&gt;</code></td>
+      <td> </td>
+      <td>Last camera position value.</td>
+    </tr>
+    <tr>
+      <td>vioRotation</td>
+      <td><code>Array.&lt;number&gt;</code></td>
+      <td> </td>
+      <td>Last VIO rotation value.</td>
+    </tr>
+    <tr>
+      <td>vioPosition</td>
+      <td><code>Array.&lt;number&gt;</code></td>
+      <td> </td>
+      <td>Last VIO position value.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_arena-user"></a></p>
+      <h2 id="arena-user">
+        
+        
+          <a href="#arena-user" class="anchor-heading" aria-labelledby="arena-user"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> arena-user
+        
+        
+      </h2>
+    
+<p>Another user’s camera in the ARENA. Handles Jitsi and display name updates.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[color]</td>
+      <td><code>color</code></td>
+      <td><code>white</code></td>
+      <td>The color for the user’s name text.</td>
+    </tr>
+    <tr>
+      <td>[headModel]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;&#x27;robobit&#x27;&quot;</code></td>
+      <td>Builtin head model (one of: ‘robobit’, ‘grey-head’)</td>
+    </tr>
+    <tr>
+      <td>[videoShape]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;&#x27;default-box&#x27;&quot;</code></td>
+      <td>Builtin video shape (one of: ‘default-box’, ‘flat-box’)</td>
+    </tr>
+    <tr>
+      <td>[jitsiId]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>User jitsi id.</td>
+    </tr>
+    <tr>
+      <td>[displayName]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>User display name.</td>
+    </tr>
+    <tr>
+      <td>[hasAudio]</td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Whether the user has audio on.</td>
+    </tr>
+    <tr>
+      <td>[hasVideo]</td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Whether the user has video on.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_arena-vive"></a></p>
+      <h2 id="arena-vive">
+        
+        
+          <a href="#arena-vive" class="anchor-heading" aria-labelledby="arena-vive"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> arena-vive
+        
+        
+      </h2>
+    
+<p>Tracking Vive controller movement in real time.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>enabled</td>
+      <td><code>boolean</code></td>
+      <td>Controller enabled.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td><code>string</code></td>
+      <td>Name used to publish controller pose.</td>
+    </tr>
+    <tr>
+      <td>hand</td>
+      <td><code>string</code></td>
+      <td>Controller hand.</td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td><code>string</code></td>
+      <td>Controller color.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_armarker-system"></a></p>
+      <h2 id="armarker-system">
+        
+        
+          <a href="#armarker-system" class="anchor-heading" aria-labelledby="armarker-system"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> armarker-system
+        
+        
+      </h2>
+    
+<p>ARMarker System. Supports ARMarkers in a scene.</p>
+
+<ul>
+  <li><a href="#module_armarker-system">armarker-system</a>
+    <ul>
+      <li><a href="#exp_module_armarker-system--registerComponent">registerComponent(marker)</a> ⏏</li>
+      <li><a href="#exp_module_armarker-system--unregisterComponent">unregisterComponent(marker)</a> ⏏</li>
+      <li><a href="#exp_module_armarker-system--getAll">getAll(mtype)</a> ⇒ <code>object</code> ⏏</li>
+      <li><a href="#exp_module_armarker-system--get">get(markerid)</a> ⇒ <code>object</code> ⏏</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a name="exp_module_armarker-system--registerComponent"></a></p>
+      <h3 id="registercomponentmarker-">
+        
+        
+          <a href="#registercomponentmarker-" class="anchor-heading" aria-labelledby="registercomponentmarker-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> registerComponent(marker) ⏏
+        
+        
+      </h3>
+    
+<p>Register an ARMarker component with the system</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>marker</td>
+      <td><code>object</code></td>
+      <td>The marker component object to register.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_armarker-system--unregisterComponent"></a></p>
+      <h3 id="unregistercomponentmarker-">
+        
+        
+          <a href="#unregistercomponentmarker-" class="anchor-heading" aria-labelledby="unregistercomponentmarker-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> unregisterComponent(marker) ⏏
+        
+        
+      </h3>
+    
+<p>Unregister an ARMarker component</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>marker</td>
+      <td><code>object</code></td>
+      <td>The marker component object to unregister.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_armarker-system--getAll"></a></p>
+      <h3 id="getallmtype--object-">
+        
+        
+          <a href="#getallmtype--object-" class="anchor-heading" aria-labelledby="getallmtype--object-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> getAll(mtype) ⇒ <code>object</code> ⏏
+        
+        
+      </h3>
+    
+<p>Get all markers registered with the system</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<strong>Returns</strong>: <code>object</code> - - a dictionary of markers</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>mtype</td>
+      <td><code>object</code></td>
+      <td>The marker type ‘apriltag_36h11’, ‘lightanchor’, ‘uwb’ to filter for; No argument or undefined will return all</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Example</strong> <em>(Query the system a list of all markers in a scene)</em></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">let</span> <span class="nx">markers</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">a-scene</span><span class="dl">"</span><span class="p">).</span><span class="nx">systems</span><span class="p">[</span><span class="dl">"</span><span class="s2">armarker</span><span class="dl">"</span><span class="p">].</span><span class="nx">getAll</span><span class="p">();</span>
+    <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">markers</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`tag id: </span><span class="p">${</span><span class="nx">markers</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">data</span><span class="p">.</span><span class="nx">markerid</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="nx">markers</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">el</span><span class="p">.</span><span class="nx">object3D</span><span class="p">.</span><span class="nx">matrixWorld</span><span class="p">);</span> <span class="c1">//matrixWorld: https://threejs.org/docs/#api/en/math/Matrix4</span>
+    <span class="p">});</span>
+</code></pre></div></div>
+<p><strong>Example</strong> <em>(getAll() also accepts a marker type argument to filter by a given type)</em></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">let</span> <span class="nx">markers</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">a-scene</span><span class="dl">"</span><span class="p">).</span><span class="nx">systems</span><span class="p">[</span><span class="dl">"</span><span class="s2">armarker</span><span class="dl">"</span><span class="p">].</span><span class="nx">getAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">apriltag_36h11</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+<p><a name="exp_module_armarker-system--get"></a></p>
+      <h3 id="getmarkerid--object-">
+        
+        
+          <a href="#getmarkerid--object-" class="anchor-heading" aria-labelledby="getmarkerid--object-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> get(markerid) ⇒ <code>object</code> ⏏
+        
+        
+      </h3>
+    
+<p>Get a marker given is markerid</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<strong>Returns</strong>: <code>object</code> - - the marker with the markerid given</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>markerid</td>
+      <td><code>object</code></td>
+      <td>The marker id to return</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_armarker"></a></p>
+      <h2 id="armarker">
+        
+        
+          <a href="#armarker" class="anchor-heading" aria-labelledby="armarker"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> armarker
+        
+        
+      </h2>
+    
+<p>ARMarker Component. Supports ARMarkers in a scene</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[markertype]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;apriltag_36h11&quot;</code></td>
+      <td>The marker type. One of ‘apriltag_36h11’, ‘lightanchor’, ‘uwb’</td>
+    </tr>
+    <tr>
+      <td>[markerid]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>Marker id. Typically an integer (e.g. for AprilTag 36h11 family, an integer in the range [0, 586])</td>
+    </tr>
+    <tr>
+      <td>[size]</td>
+      <td><code>number</code></td>
+      <td><code>150</code></td>
+      <td>Size of the marker (assumed to be a square), if applicable (mm).</td>
+    </tr>
+    <tr>
+      <td>[url]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>A URL associated with the marker.</td>
+    </tr>
+    <tr>
+      <td>[lat]</td>
+      <td><code>number</code></td>
+      <td><code>0</code></td>
+      <td>Marker latitude.</td>
+    </tr>
+    <tr>
+      <td>[long]</td>
+      <td><code>number</code></td>
+      <td><code>0</code></td>
+      <td>Marker longitude.</td>
+    </tr>
+    <tr>
+      <td>[ele]</td>
+      <td><code>number</code></td>
+      <td><code>0</code></td>
+      <td>Marker elevation.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_attribution-system"></a></p>
+      <h2 id="attribution-system">
+        
+        
+          <a href="#attribution-system" class="anchor-heading" aria-labelledby="attribution-system"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> attribution-system
+        
+        
+      </h2>
+    
+<p>Attribution Component/System. Add attribution message to any entity.
+Tries to extract author, license, source and title (assuming format used in sketchfab downloaded models)</p>
+
+<p>Looks for authorship metadata in both asset.extras (sketchfab models) and scene.extra (manually added attributes in blender).
+If both asset.extras and scene.extra exist, gives preference to asset.extras.</p>
+
+<p><strong>Example</strong> <em>(Sketchfab downloaded model attributes - asset.extra)</em></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nx">author</span><span class="p">:</span> <span class="dl">"</span><span class="s2">AuthorName (url-link-to-author)</span><span class="dl">"</span>
+   <span class="nx">license</span><span class="p">:</span> <span class="dl">"</span><span class="s2">CC-BY-4.0 (url-link-to-license)</span><span class="dl">"</span>
+   <span class="nx">source</span><span class="p">:</span> <span class="dl">"</span><span class="s2">url-link-to-model-website</span><span class="dl">"</span>
+   <span class="nx">title</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Model Title</span><span class="dl">"</span>
+</code></pre></div></div>
+
+<ul>
+  <li><a href="#module_attribution-system">attribution-system</a>
+    <ul>
+      <li><a href="#exp_module_attribution-system--registerComponent">registerComponent(el)</a> ⏏</li>
+      <li><a href="#exp_module_attribution-system--unregisterComponent">unregisterComponent(el)</a> ⏏</li>
+      <li><a href="#exp_module_attribution-system--getAttributionTable">getAttributionTable()</a> ⇒ <code>string</code> ⏏</li>
+      <li><a href="#exp_module_attribution-system--extractAttributionFromGtlfAsset">extractAttributionFromGtlfAsset(el, gltfComponent)</a> ⏏</li>
+      <li><a href="#exp_module_attribution-system--parseExtrasAttributes">parseExtrasAttributes(extras)</a> ⇒ <code>object</code> ⏏</li>
+      <li><a href="#exp_module_attribution-system--parseAttribute">parseAttribute(extras, attribution, attribute)</a> ⇒ <code>boolean</code> ⏏</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a name="exp_module_attribution-system--registerComponent"></a></p>
+      <h3 id="registercomponentel-">
+        
+        
+          <a href="#registercomponentel-" class="anchor-heading" aria-labelledby="registercomponentel-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> registerComponent(el) ⏏
+        
+        
+      </h3>
+    
+<p>Register an attribution component with the system</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td><code>object</code></td>
+      <td>The attribution a-frame element to register.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_attribution-system--unregisterComponent"></a></p>
+      <h3 id="unregistercomponentel-">
+        
+        
+          <a href="#unregistercomponentel-" class="anchor-heading" aria-labelledby="unregistercomponentel-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> unregisterComponent(el) ⏏
+        
+        
+      </h3>
+    
+<p>Unregister an attribution component</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td><code>object</code></td>
+      <td>The attribution a-frame element.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_attribution-system--getAttributionTable"></a></p>
+      <h3 id="getattributiontable--string-">
+        
+        
+          <a href="#getattributiontable--string-" class="anchor-heading" aria-labelledby="getattributiontable--string-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> getAttributionTable() ⇒ <code>string</code> ⏏
+        
+        
+      </h3>
+    
+<p>Collect all attribution components and return an HTML table with credits</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<strong>Returns</strong>: <code>string</code> - - an HTML table with the scene credits<br />
+<strong>Example</strong> <em>(Query the system for an HTML table of credits:)</em></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">a-scene</span><span class="dl">"</span><span class="p">).</span><span class="nx">systems</span><span class="p">[</span><span class="dl">"</span><span class="s2">attribution</span><span class="dl">"</span><span class="p">].</span><span class="nx">getAttributionTable</span><span class="p">();</span>
+</code></pre></div></div>
+<p><a name="exp_module_attribution-system--extractAttributionFromGtlfAsset"></a></p>
+      <h3 id="extractattributionfromgtlfassetel-gltfcomponent-">
+        
+        
+          <a href="#extractattributionfromgtlfassetel-gltfcomponent-" class="anchor-heading" aria-labelledby="extractattributionfromgtlfassetel-gltfcomponent-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> extractAttributionFromGtlfAsset(el, gltfComponent) ⏏
+        
+        
+      </h3>
+    
+<p>Extract author, license, source and title assuming sketchfab format:
+  author: “AuthorName (url-link-to-author)”
+  license: “CC-BY-4.0 (url-link-to-license)”
+  source: “url-link-to-model-website”
+  title: “Model Title”</p>
+
+<p>It will try to get exttributes from gltf’s asset.extras (sketchfab) and scene.userData (blender)
+If both are found, data will be merged with preference to properties in asset.extras</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td><code>object</code></td>
+      <td>the aframe element to set the attribution</td>
+    </tr>
+    <tr>
+      <td>gltfComponent</td>
+      <td><code>object</code></td>
+      <td>the GLTF model to extract properties from</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_attribution-system--parseExtrasAttributes"></a></p>
+      <h3 id="parseextrasattributesextras--object-">
+        
+        
+          <a href="#parseextrasattributesextras--object-" class="anchor-heading" aria-labelledby="parseextrasattributesextras--object-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> parseExtrasAttributes(extras) ⇒ <code>object</code> ⏏
+        
+        
+      </h3>
+    
+<p>Parse author, license, source and title attributes.</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<strong>Returns</strong>: <code>object</code> - - a dictionary with the author, license, source and title parsed</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>extras</td>
+      <td><code>object</code></td>
+      <td>the source for the attribute data (asset.extras or scene.userData)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_attribution-system--parseAttribute"></a></p>
+      <h3 id="parseattributeextras-attribution-attribute--boolean-">
+        
+        
+          <a href="#parseattributeextras-attribution-attribute--boolean-" class="anchor-heading" aria-labelledby="parseattributeextras-attribution-attribute--boolean-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> parseAttribute(extras, attribution, attribute) ⇒ <code>boolean</code> ⏏
+        
+        
+      </h3>
+    
+<p>Parse attribute given as parameter. Tries to find the attribute and add it to ‘attribution’ dictionary</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<strong>Returns</strong>: <code>boolean</code> - - true/false if it could find the attribute</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>extras</td>
+      <td><code>object</code></td>
+      <td>the source for the attribute data</td>
+    </tr>
+    <tr>
+      <td>attribution</td>
+      <td><code>object</code></td>
+      <td>the destination attribute dictionary</td>
+    </tr>
+    <tr>
+      <td>attribute</td>
+      <td><code>object</code></td>
+      <td>which attribute to parse</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_attribution"></a></p>
+      <h2 id="attribution">
+        
+        
+          <a href="#attribution" class="anchor-heading" aria-labelledby="attribution"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> attribution
+        
+        
+      </h2>
+    
+<p>Attribution Component. Saves attribution data in any entity. The following properties can be saved.
+If <code class="language-plaintext highlighter-rouge">extractAssetExtras=true</code> (default), the <a href="https://help.sketchfab.com/hc/en-us/articles/202512396-Model-Properties">attribution system</a> attempts to extract data automatically from the model (requires models with authorship metadata; e.g. models downloaded from sketchfab have these data)</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[author]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;Unknown&quot;</code></td>
+      <td>Author name; e.g. “Vaptor-Studio”</td>
+    </tr>
+    <tr>
+      <td>[authorURL]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>Author homepage/profile; e.g. https://sketchfab.com/VapTor</td>
+    </tr>
+    <tr>
+      <td>[license]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;Unknown&quot;</code></td>
+      <td>License summary/short name; e.g. “CC-BY-4.0”.</td>
+    </tr>
+    <tr>
+      <td>[licenseURL]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>License URL; e.g. http://creativecommons.org/licenses/by/4.0/</td>
+    </tr>
+    <tr>
+      <td>[source]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;Unknown&quot;</code></td>
+      <td>Model source e.g. “Sketchfab”.</td>
+    </tr>
+    <tr>
+      <td>[sourceURL]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>Model source URL; e.g. https://sketchfab.com/models/2135501583704537907645bf723685e7</td>
+    </tr>
+    <tr>
+      <td>[title]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;No Title&quot;</code></td>
+      <td>Model title; e.g. “Spinosaurus”.</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>The entity id in the scene; automatically filled in on component init</td>
+    </tr>
+    <tr>
+      <td>[extractAssetExtras]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>Extract attribution info from asset extras; will override attribution info given (default: true)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_click-listener"></a></p>
+      <h2 id="click-listener">
+        
+        
+          <a href="#click-listener" class="anchor-heading" aria-labelledby="click-listener"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> click-listener
+        
+        
+      </h2>
+    
+<p>Keep track of mouse events and publish corresponding events</p>
+
+<p><a name="exp_module_click-listener--init"></a></p>
+      <h3 id="init-">
+        
+        
+          <a href="#init-" class="anchor-heading" aria-labelledby="init-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> init() ⏏
+        
+        
+      </h3>
+    
+<p>Setup event listeners for mouse events; listeners publish events to MQTT</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<strong>Todo</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Consolidate event listeners (they are very similar)</li>
+</ul>
+
+<p><a name="module_collision-listener"></a></p>
+      <h2 id="collision-listener">
+        
+        
+          <a href="#collision-listener" class="anchor-heading" aria-labelledby="collision-listener"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> collision-listener
+        
+        
+      </h2>
+    
+<p>Listen for collisions, callback on event.
+Requires <a href="https://github.com/n5ro/aframe-physics-system">Physics for A-Frame VR</a></p>
+
+<p><strong>Requires</strong>: <code>module:aframe-physics-system</code><br />
+<a name="module_gesture-detector"></a></p>
+      <h2 id="gesture-detector">
+        
+        
+          <a href="#gesture-detector" class="anchor-heading" aria-labelledby="gesture-detector"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> gesture-detector
+        
+        
+      </h2>
+    
+<p>Detect multi-finger touch gestures. Publish events accordingly.
+Based off 8th Wall’s <a href="https://github.com/8thwall/web/tree/master/examples/aframe">gesture-detector</a></p>
+
+<p><a name="module_gltf-model-progress"></a></p>
+      <h2 id="gltf-model-progress">
+        
+        
+          <a href="#gltf-model-progress" class="anchor-heading" aria-labelledby="gltf-model-progress"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> gltf-model-progress
+        
+        
+      </h2>
+    
+<p>GLTF model loading progress system. Manage GLTF load messages.</p>
+
+<ul>
+  <li><a href="#module_gltf-model-progress">gltf-model-progress</a>
+    <ul>
+      <li><a href="#exp_module_gltf-model-progress--init">init()</a> ⏏</li>
+      <li><a href="#exp_module_gltf-model-progress--registerGltf">registerGltf(el)</a> ⏏</li>
+      <li><a href="#exp_module_gltf-model-progress--unregisterGltfBySrc">unregisterGltfBySrc(el)</a> ⏏</li>
+      <li><a href="#exp_module_gltf-model-progress--updateProgress">updateProgress(failed, evt)</a> ⏏</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a name="exp_module_gltf-model-progress--init"></a></p>
+      <h3 id="init--1">
+        
+        
+          <a href="#init--1" class="anchor-heading" aria-labelledby="init--1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> init() ⏏
+        
+        
+      </h3>
+    
+<p>Init system</p>
+
+<p><strong>Kind</strong>: Exported function<br />
+<a name="exp_module_gltf-model-progress--registerGltf"></a></p>
+      <h3 id="registergltfel-">
+        
+        
+          <a href="#registergltfel-" class="anchor-heading" aria-labelledby="registergltfel-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> registerGltf(el) ⏏
+        
+        
+      </h3>
+    
+<p>Register a gltf-model to deal with load events</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td><code>object</code></td>
+      <td>The a-frame element to register.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_gltf-model-progress--unregisterGltfBySrc"></a></p>
+      <h3 id="unregistergltfbysrcel-">
+        
+        
+          <a href="#unregistergltfbysrcel-" class="anchor-heading" aria-labelledby="unregistergltfbysrcel-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> unregisterGltfBySrc(el) ⏏
+        
+        
+      </h3>
+    
+<p>Unregister a gltf-model</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td><code>object</code></td>
+      <td>The a-frame element.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="exp_module_gltf-model-progress--updateProgress"></a></p>
+      <h3 id="updateprogressfailed-evt-">
+        
+        
+          <a href="#updateprogressfailed-evt-" class="anchor-heading" aria-labelledby="updateprogressfailed-evt-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> updateProgress(failed, evt) ⏏
+        
+        
+      </h3>
+    
+<p>Updates GLTF Progress</p>
+
+<p><strong>Kind</strong>: Exported function</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>failed</td>
+      <td><code>boolean</code></td>
+      <td>whether or not download was successful</td>
+    </tr>
+    <tr>
+      <td>evt</td>
+      <td><code>object</code></td>
+      <td>gltf event</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_goto-url"></a></p>
+      <h2 id="goto-url">
+        
+        
+          <a href="#goto-url" class="anchor-heading" aria-labelledby="goto-url"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> goto-url
+        
+        
+      </h2>
+    
+<p>Load new URL when object is clicked</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>on</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>A case-sensitive string representing the <a href="https://developer.mozilla.org/en-US/docs/Web/Events">event type</a> to listen for, e.g. ‘mousedown’, ‘mouseup’</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>The destination url e.g. https://some-site.com</td>
+    </tr>
+    <tr>
+      <td>[dest]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;sametab&quot;</code></td>
+      <td>Where to open the URL; one of ‘popup’, ‘newtab’, ‘sametab’</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_hide-in-ar-mode"></a></p>
+      <h2 id="hide-in-ar-mode">
+        
+        
+          <a href="#hide-in-ar-mode" class="anchor-heading" aria-labelledby="hide-in-ar-mode"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> hide-in-ar-mode
+        
+        
+      </h2>
+    
+<p>Hide in AR component. When set to an entity, it will make the entity disappear when entering AR mode.
+Based on <a href="https://github.com/aframevr/aframe/pull/4356">this example</a></p>
+
+<p><a name="module_impulse"></a></p>
+      <h2 id="impulse">
+        
+        
+          <a href="#impulse" class="anchor-heading" aria-labelledby="impulse"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> impulse
+        
+        
+      </h2>
+    
+<p>One physics feature is applying an impulse to an object to set it in motion.
+This happens in conjunction with an event.
+Requires <a href="https://github.com/n5ro/aframe-physics-system">Physics for A-Frame VR</a></p>
+
+<p><strong>Requires</strong>: <code>module:aframe-physics-system</code><br />
+<a name="module_jitsi-video"></a></p>
+      <h2 id="jitsi-video">
+        
+        
+          <a href="#jitsi-video" class="anchor-heading" aria-labelledby="jitsi-video"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> jitsi-video
+        
+        
+      </h2>
+    
+<p>Apply a jitsi video to a geometry
+Jitsi video source can be defined using a jitsiId or (ARENA/Jitsi) display name</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[jitsiId]</td>
+      <td><code>string</code></td>
+      <td>JitsiId of the video source; If defined will override displayName</td>
+    </tr>
+    <tr>
+      <td>[displayName]</td>
+      <td><code>string</code></td>
+      <td>ARENA or Jitsi display name of the video source; Will be ignored if jitsiId is given. IMPORTANT: editing this property requires reload</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_landmark"></a></p>
+      <h2 id="landmark">
+        
+        
+          <a href="#landmark" class="anchor-heading" aria-labelledby="landmark"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> landmark
+        
+        
+      </h2>
+    
+<p>Component-System of teleport destination Landmarks</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[randomRadiusMin]</td>
+      <td><code>number</code></td>
+      <td><code>0</code></td>
+      <td>Min for a random range to teleport to. Max must &gt; 0</td>
+    </tr>
+    <tr>
+      <td>[randomRadiusMax]</td>
+      <td><code>number</code></td>
+      <td><code>0</code></td>
+      <td>Max for a random range to teleport to.</td>
+    </tr>
+    <tr>
+      <td>[offsetPosition]</td>
+      <td><code>THREE.Vector3</code></td>
+      <td><code>{0,1.6,0}</code></td>
+      <td>vector3 {x,y,z} to use as static teleport offset</td>
+    </tr>
+    <tr>
+      <td>[constrainToNavMesh]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;&#x27;false&#x27;&quot;</code></td>
+      <td>Teleports here should snap to navmesh. [‘false’, ‘any’, ‘coplanar’]</td>
+    </tr>
+    <tr>
+      <td>[startingPosition]</td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>True: use as a random scene load-in position</td>
+    </tr>
+    <tr>
+      <td>[lookAtLandmark]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>True: After teleporting, user should rotate @ landmark</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td><code>string</code></td>
+      <td><code>&quot;&#x27;&#x27;&quot;</code></td>
+      <td>Display label for Landmarks UI menu</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_load-scene"></a></p>
+      <h2 id="load-scene">
+        
+        
+          <a href="#load-scene" class="anchor-heading" aria-labelledby="load-scene"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> load-scene
+        
+        
+      </h2>
+    
+<p>Load scene from persistence.</p>
+
+<p><strong>Todo</strong></p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />this component is currently not used and probably needs to be updated</li>
+</ul>
+
+<p><a name="module_material-extras"></a></p>
+      <h2 id="material-extras">
+        
+        
+          <a href="#material-extras" class="anchor-heading" aria-labelledby="material-extras"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> material-extras
+        
+        
+      </h2>
+    
+<p>Allows to set extra material properties, namely texture encoding, whether to render the material’s color and render order.
+The properties set here access directly <a href="https://threejs.org/docs/#api/en/materials/Material">Three.js material</a>.
+Implements a timeout scheme in lack of better understanding of the timing/events causing properties to not be available.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[encoding]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;sRGBEncoding&quot;</code></td>
+      <td>The material encoding; One of ‘LinearEncoding’, ‘sRGBEncoding’, ‘GammaEncoding’, ‘RGBEEncoding’, ‘LogLuvEncoding’, ‘RGBM7Encoding’, ‘RGBM16Encoding’, ‘RGBDEncoding’, ‘BasicDepthPacking’, ‘RGBADepthPacking’. See <a href="https://threejs.org/docs/#api/en/materials/Material">Three.js material</a>.</td>
+    </tr>
+    <tr>
+      <td>[needsUpdate]</td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>Specifies that the material needs to be recompiled. See <a href="https://threejs.org/docs/#api/en/materials/Material">Three.js material</a>.</td>
+    </tr>
+    <tr>
+      <td>[colorWrite]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>Whether to render the material’s color. See <a href="https://threejs.org/docs/#api/en/materials/Material">Three.js material</a>.</td>
+    </tr>
+    <tr>
+      <td>[renderOrder]</td>
+      <td><code>number</code></td>
+      <td><code>1</code></td>
+      <td>This value allows the default rendering order of scene graph objects to be overridden. See <a href="https://threejs.org/docs/#api/en/core/Object3D.renderOrder">Three.js Object3D.renderOrder</a>.</td>
+    </tr>
+    <tr>
+      <td>[transparentOccluder]</td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>If <code class="language-plaintext highlighter-rouge">true</code>, will set <code class="language-plaintext highlighter-rouge">colorWrite=false</code> and <code class="language-plaintext highlighter-rouge">renderOrder=0</code> to make the material a transparent occluder.</td>
+    </tr>
+    <tr>
+      <td>[defaultRenderOrder]</td>
+      <td><code>number</code></td>
+      <td><code>1</code></td>
+      <td>Used as the renderOrder when transparentOccluder is reset to <code class="language-plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_network-latency"></a></p>
+      <h2 id="network-latency">
+        
+        
+          <a href="#network-latency" class="anchor-heading" aria-labelledby="network-latency"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> network-latency
+        
+        
+      </h2>
+    
+<p>Publish with qos of 2 for network graph to update latency</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>UPDATE_INTERVAL_MS</td>
+      <td><code>number</code></td>
+      <td><code>10000</code></td>
+      <td>Interval to send the periodic pings (ms)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_press-and-move"></a></p>
+      <h2 id="press-and-move">
+        
+        
+          <a href="#press-and-move" class="anchor-heading" aria-labelledby="press-and-move"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> press-and-move
+        
+        
+      </h2>
+    
+<p>Press and move camera; User camera movement with the mouse.
+Based off <a href="https://github.com/aframevr/aframe/blob/master/src/components/wasd-controls.js">wasd controls</a></p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[acceleration]</td>
+      <td><code>number</code></td>
+      <td><code>30</code></td>
+      <td>Movement acceleration.</td>
+    </tr>
+    <tr>
+      <td>[enabled]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>Is the camera movement component enabled.</td>
+    </tr>
+    <tr>
+      <td>[fly]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>Is the camera at a fixed height (<code class="language-plaintext highlighter-rouge">fly=false</code>) or not (<code class="language-plaintext highlighter-rouge">fly=true</code>)</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_screenshareable"></a></p>
+      <h2 id="screenshareable">
+        
+        
+          <a href="#screenshareable" class="anchor-heading" aria-labelledby="screenshareable"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> screenshareable
+        
+        
+      </h2>
+    
+<p>Screenshare-able Component. Allows an object to be screenshared upon</p>
+
+<p><a name="module_textinput"></a></p>
+      <h2 id="textinput">
+        
+        
+          <a href="#textinput" class="anchor-heading" aria-labelledby="textinput"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> textinput
+        
+        
+      </h2>
+    
+<p>Opens an HTML prompt when clicked. Sends text input as an event on MQTT</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[on]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;mousedown&quot;</code></td>
+      <td>A case-sensitive string representing the <a href="https://developer.mozilla.org/en-US/docs/Web/Events">event type</a> to listen for, e.g. ‘mousedown’, ‘mouseup’</td>
+    </tr>
+    <tr>
+      <td>[title]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;Text Input&quot;</code></td>
+      <td>The prompt title</td>
+    </tr>
+    <tr>
+      <td>[label]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;Input text below (max is 140 characters)&quot;</code></td>
+      <td>Text prompt label</td>
+    </tr>
+    <tr>
+      <td>[placeholder]</td>
+      <td><code>string</code></td>
+      <td><code>&quot;Type here&quot;</code></td>
+      <td>Text input place hoText</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_threejs-scene"></a></p>
+      <h2 id="threejs-scene">
+        
+        
+          <a href="#threejs-scene" class="anchor-heading" aria-labelledby="threejs-scene"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> threejs-scene
+        
+        
+      </h2>
+    
+<p>Load a <a href="https://threejs.org/docs/#api/en/scenes/Scene">THREE.js scene</a>. THREE.js scene format is an almost direct serialization of the THREE.js objects, and can be THREE.js version-specific; you can see THREE.js version in the JS console once you open ARENA
+For a move portable format, using glTF is preferred.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td><code>string</code></td>
+      <td>the three.js scene to load</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_ttl"></a></p>
+      <h2 id="ttl">
+        
+        
+          <a href="#ttl" class="anchor-heading" aria-labelledby="ttl"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ttl
+        
+        
+      </h2>
+    
+<p>Time To Live (TTL) component.</p>
+
+<p>When applied to an entity, the entity will remove itself from DOM after the specified number of seconds.
+Update <em>is</em> allowed, which will reset the timer to start from that moment.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>seconds</td>
+      <td><code>number</code></td>
+      <td>Seconds until entity is removed</td>
+    </tr>
+    <tr>
+      <td>expireAt</td>
+      <td><code>object</code></td>
+      <td>Expiration time <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date object</a></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><a name="module_video-control"></a></p>
+      <h2 id="video-control">
+        
+        
+          <a href="#video-control" class="anchor-heading" aria-labelledby="video-control"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> video-control
+        
+        
+      </h2>
+    
+<p>Adds a video to an entity and controls its playback.</p>
+
+<p><strong>Properties</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>video_object</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>the object id of the element where to display the video</td>
+    </tr>
+    <tr>
+      <td>video_path</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>path/url to the video</td>
+    </tr>
+    <tr>
+      <td>[frame_object]</td>
+      <td><code>string</code></td>
+      <td> </td>
+      <td>path/url to the keyframe to display</td>
+    </tr>
+    <tr>
+      <td>[anyone_clicks]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>anyone clicks</td>
+    </tr>
+    <tr>
+      <td>[video_loop]</td>
+      <td><code>boolean</code></td>
+      <td><code>true</code></td>
+      <td>video loop</td>
+    </tr>
+    <tr>
+      <td>[autoplay]</td>
+      <td><code>boolean</code></td>
+      <td><code>false</code></td>
+      <td>video autoplays on load</td>
+    </tr>
+    <tr>
+      <td>[volume]</td>
+      <td><code>number</code></td>
+      <td><code>1</code></td>
+      <td>video sound volume</td>
+    </tr>
+  </tbody>
+</table></div>
+
+        
+
+        
+
+        
+          <hr>
+          <footer>
+            
+            
+              <p class="text-small text-grey-dk-000 mb-0">Copyright &copy; 2020-2021, CONIX Research Center</p>
+            
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

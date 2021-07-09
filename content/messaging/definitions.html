@@ -1,0 +1,1999 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>JSON Spec - ARENA Documentation</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>JSON Spec | ARENA Documentation</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="JSON Spec" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tutorials and Reference for the ARENA project." />
+<meta property="og:description" content="Tutorials and Reference for the ARENA project." />
+<link rel="canonical" href="https://arena.conix.io/content/messaging/definitions.html" />
+<meta property="og:url" content="https://arena.conix.io/content/messaging/definitions.html" />
+<meta property="og:site_name" content="ARENA Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="JSON Spec" />
+<script type="application/ld+json">
+{"description":"Tutorials and Reference for the ARENA project.","url":"https://arena.conix.io/content/messaging/definitions.html","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arena.conix.io/xr-logo.png"}},"headline":"JSON Spec","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://arena.conix.io/" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://arena.conix.io/" class="nav-list-link">The ARENA</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/overview/" class="nav-list-link">Overview</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/user-guide.html" class="nav-list-link">First Time in the ARENA</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/build.html" class="nav-list-link">Build Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/dev-guide.html" class="nav-list-link">Develop Python Programs</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/screenshare.html" class="nav-list-link">ARENA Screenshare</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/next.html" class="nav-list-link">Next Steps</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/pubsub.html" class="nav-list-link">MQTT</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/platforms.html" class="nav-list-link">Cross Platform Support</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/coordinate-frame.html" class="nav-list-link">Coordinate Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/source.html" class="nav-list-link">Source and Links</a></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/messaging/" class="nav-list-link">Messaging Format</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/examples.html" class="nav-list-link">Examples</a></li><li class="nav-list-item  active"><a href="https://arena.conix.io/content/messaging/definitions.html" class="nav-list-link active">JSON Spec</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/arena-aframe-components.html" class="nav-list-link">ARENA A-Frame Components</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/python/" class="nav-list-link">Python Library</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/python/scenes.html" class="nav-list-link">Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/objects.html" class="nav-list-link">Objects</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/attributes.html" class="nav-list-link">Attributes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/events.html" class="nav-list-link">Events</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/tasks.html" class="nav-list-link">Tasks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/callbacks.html" class="nav-list-link">Scene Callbacks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/animations.html" class="nav-list-link">Animations and Morphs</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/3d-content/" class="nav-list-link">3D Content</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/unity.html" class="nav-list-link">Exporting from Unity</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/gltf-files.html" class="nav-list-link">GLTF Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/downscaling.html" class="nav-list-link">Downscaling Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/dimension.html" class="nav-list-link">Converting SketchUp Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/animated-models.html" class="nav-list-link">Animated Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/mesh-nav.html" class="nav-list-link">Navigation Meshes</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/localization/" class="nav-list-link">Localization & Tracking</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optitrack.html" class="nav-list-link">Opititrack</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optical-markers.html" class="nav-list-link">Optical Markers</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/uwb.html" class="nav-list-link">UWB</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/user-security/" class="nav-list-link">Users & Security</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-presence.html" class="nav-list-link">User Presence</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-account.html" class="nav-list-link">User Account</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/security.html" class="nav-list-link">Security</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/tools/" class="nav-list-link">Tools</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/persistence.html" class="nav-list-link">Persistence DB</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/localizer.html" class="nav-list-link">Localizer</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/filestore.html" class="nav-list-link">File Store</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/authoring.html" class="nav-list-link">Authoring Program</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/atlas.html" class="nav-list-link">ATLAS</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/params.html" class="nav-list-link">URL Parameters</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/arts/" class="nav-list-link">ARENA Runtime Supervisor</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/mqtt-broker.html" class="nav-list-link">MQTT Broker</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/runtime.html" class="nav-list-link">Runtime</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/python.html" class="nav-list-link">Program Launch Example</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/developer/" class="nav-list-link">Developers</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/threejs.html" class="nav-list-link">Three.js</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/aframe.html" class="nav-list-link">A-Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="https://arena.conix.io/content/troubleshooting.html" class="nav-list-link">Troubleshooting</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ARENA Documentation" aria-label="Search ARENA Documentation" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://arenaxr.org/" class="site-button"
+                  
+                >
+                  The ARENA
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://conix.io/arena" class="site-button"
+                  
+                >
+                  CONIX Research Center
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/conix-center/" class="site-button"
+                  
+                >
+                  Our GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://arena.conix.io/content/messaging/">Messaging Format</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>JSON Spec</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h2 id="arena-mqtt-message-payload-json-specification">
+        
+        
+          <a href="#arena-mqtt-message-payload-json-specification" class="anchor-heading" aria-labelledby="arena-mqtt-message-payload-json-specification"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ARENA MQTT Message Payload JSON Specification
+        
+        
+      </h2>
+    
+<p>Each ARENA message is JSON formatted and is structured for its general use and persistence within the ARENA environment. Each message begins with a <a href="#scene-message-object"><code class="language-plaintext highlighter-rouge">Scene Message object</code></a> of general properties, paired with a more granular detailed <code class="language-plaintext highlighter-rouge">data</code> sub-object which varies in form and follow the examples below.</p>
+<ul>
+  <li><a href="https://github.com/conix-center/ARENA-core"><strong>ARENA-core</strong></a> webserver repository</li>
+</ul>
+
+<div class="alert-box alert-warning" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          Coming soon
+        
+        
+      </h4>
+    
+    
+<p>Another column can be added which defines which properties are ARENA-format JSON, and which are Arbitrary A-Frame JSON properties which are applied in HTML as attributes.</p>
+
+</div>
+      <h2 id="examples">
+        
+        
+          <a href="#examples" class="anchor-heading" aria-labelledby="examples"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Examples
+        
+        
+      </h2>
+    
+      <h3 id="object-message">
+        
+        
+          <a href="#object-message" class="anchor-heading" aria-labelledby="object-message"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Object Message
+        
+        
+      </h3>
+    
+<p><a href="#scene-message-object"><code class="language-plaintext highlighter-rouge">Scene Message object</code></a> with a <code class="language-plaintext highlighter-rouge">data</code> property of the <a href="#object-data-object"><code class="language-plaintext highlighter-rouge">Object Data</code> object</a>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube_1"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"object_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cube"</span><span class="p">,</span><span class="w"> </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">},</span><span class="w"> </span><span class="nl">"rotation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"w"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="nl">"scale"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#FF0000"</span><span class="p">}}</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="event-message">
+        
+        
+          <a href="#event-message" class="anchor-heading" aria-labelledby="event-message"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Event Message
+        
+        
+      </h3>
+    
+<p><a href="#scene-message-object"><code class="language-plaintext highlighter-rouge">Scene Message object</code></a> with a <code class="language-plaintext highlighter-rouge">data</code> property of the <a href="#event-data-object"><code class="language-plaintext highlighter-rouge">Event Data</code> object</a>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fallBox2"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clientEvent"</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mousedown"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.993</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.342</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">-1.797</span><span class="p">},</span><span class="w"> </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"camera_8715_er"</span><span class="p">}}</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="program-message">
+        
+        
+          <a href="#program-message" class="anchor-heading" aria-labelledby="program-message"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Program Message
+        
+        
+      </h3>
+    
+<p><a href="#scene-message-object"><code class="language-plaintext highlighter-rouge">Scene Message object</code></a> with a <code class="language-plaintext highlighter-rouge">data</code> property of the <a href="#program-data-object"><code class="language-plaintext highlighter-rouge">Program Data</code> object</a>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6aafedf3-e313-4785-a456-939de8677f07"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update"</span><span class="p">,</span><span class="w"> </span><span class="nl">"persist"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"program"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wiselab/arb"</span><span class="p">,</span><span class="w"> </span><span class="nl">"instantiate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w"> </span><span class="nl">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arb.py"</span><span class="p">,</span><span class="w"> </span><span class="nl">"filetype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PY"</span><span class="p">,</span><span class="w"> </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"${scene}"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-b"</span><span class="p">,</span><span class="w"> </span><span class="s2">" ${mqtth}"</span><span class="p">]}}</span><span class="w">
+</span></code></pre></div></div>
+      <h3 id="scene-options-message">
+        
+        
+          <a href="#scene-options-message" class="anchor-heading" aria-labelledby="scene-options-message"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Scene Options Message
+        
+        
+      </h3>
+    
+<p><a href="#scene-message-object"><code class="language-plaintext highlighter-rouge">Scene Message object</code></a> with a <code class="language-plaintext highlighter-rouge">data</code> property of the <a href="#scene-options-data-object"><code class="language-plaintext highlighter-rouge">Scene Options Data</code> object</a>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"object_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e9a16478-2606-4cd0-bb9f-b03879bc8baa"</span><span class="p">,</span><span class="w"> </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"update"</span><span class="p">,</span><span class="w"> </span><span class="nl">"persist"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scene-options"</span><span class="p">,</span><span class="w"> </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"env-presets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nl">"lighting"</span><span class="p">:</span><span class="w"> </span><span class="s2">"distant"</span><span class="p">,</span><span class="w"> </span><span class="nl">"lightPosition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">-10</span><span class="p">},</span><span class="w"> </span><span class="nl">"ground"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hills"</span><span class="p">,</span><span class="w"> </span><span class="nl">"groundTexture"</span><span class="p">:</span><span class="w"> </span><span class="s2">"squares"</span><span class="p">,</span><span class="w"> </span><span class="nl">"groundColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#444241"</span><span class="p">,</span><span class="w"> </span><span class="nl">"groundYScale"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">},</span><span class="w"> </span><span class="nl">"scene-options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"jitsiServer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jitsi1.andrew.cmu.edu"</span><span class="p">,</span><span class="w"> </span><span class="nl">"clickableOnlyEvents"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nl">"privateScene"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}}}</span><span class="w">
+</span></code></pre></div></div><hr />
+      <h2 id="how-to-read-these-tables">
+        
+        
+          <a href="#how-to-read-these-tables" class="anchor-heading" aria-labelledby="how-to-read-these-tables"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> How to Read These Tables
+        
+        
+      </h2>
+    
+
+<ul>
+  <li><strong>property</strong> JSON name of the property, also a <a href="#object-message">link to an example</a> if available.</li>
+  <li><strong>support</strong>  <em>Support libraries:</em><br /> <strong>A</strong>: ARENA-Managed property<br /> <strong>H</strong>: Arbitrary A-Frame HTML property<br /> <strong>P</strong>: Python library property</li>
+  <li><strong>type</strong> JSON property type: <code class="language-plaintext highlighter-rouge">string, number, boolean,</code> or another <a href="#scene-message-object"><code class="language-plaintext highlighter-rouge">named object type</code> with a link</a>.</li>
+  <li><strong>description</strong> JSON property description. (Any <em>default settings for the property</em>, or <strong>if the property is required</strong>.)</li>
+</ul><hr />
+      <h2 id="scene-message-object">
+        
+        
+          <a href="#scene-message-object" class="anchor-heading" aria-labelledby="scene-message-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “Scene Message” object
+        
+        
+      </h2>
+    
+<p>This is the main payload body of every MQTT scene topic in the ARENA.</p>
+      <h3 id="properties">
+        
+        
+          <a href="#properties" class="anchor-heading" aria-labelledby="properties"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>object_id</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>A unique name within the scene (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>action</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>An action to perform: <code class="language-plaintext highlighter-rouge">create, delete, update, clientEvent</code> (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Message type: <code class="language-plaintext highlighter-rouge">object, program, scene-options, rig, camera-override, mousedown, mouseup, mouseenter, mouseleave, triggerdown, triggerup, gripdown, gripup, menudown, menuup, systemdown, systemup, trackpaddown, trackpadup</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#persisted-objects">persist</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>Save to persistence database (<em>default: false</em>).</td>
+    </tr>
+    <tr>
+      <td><a href="examples#temporary-objects-ttl">ttl</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Time-to-live seconds to create the object and automatically delete (<em>default: 0</em>).</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td><em>A/P</em></td>
+      <td><a href="#object-data-object"><code class="language-plaintext highlighter-rouge">Object Data</code> object</a></td>
+      <td>The detailed properties of a 3d object in the scene. Used by Message Type <code class="language-plaintext highlighter-rouge">object</code>.</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td><em>A/P</em></td>
+      <td><a href="#event-data-object"><code class="language-plaintext highlighter-rouge">Event Data</code> object</a></td>
+      <td>The detailed properties of an event in the scene. Used by Event Type <code class="language-plaintext highlighter-rouge">mousedown (and others)</code>, Action: <code class="language-plaintext highlighter-rouge">clientEvent</code>.</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td><em>A</em></td>
+      <td><a href="#program-data-object"><code class="language-plaintext highlighter-rouge">Program Data</code> object</a></td>
+      <td>The detailed properties of a program managed by the <a href="../arts">runtime manager</a> in the scene. Used by Message Type <code class="language-plaintext highlighter-rouge">program</code>.</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td><em>A</em></td>
+      <td><a href="#scene-options-data-object"><code class="language-plaintext highlighter-rouge">Scene Options Data</code> object</a></td>
+      <td>The detailed properties of the scene environment. Used by Message Type <code class="language-plaintext highlighter-rouge">scene-options</code>.</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+      <h2 id="actions">
+        
+        
+          <a href="#actions" class="anchor-heading" aria-labelledby="actions"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actions
+        
+        
+      </h2>
+    
+
+<p>The <code class="language-plaintext highlighter-rouge">create</code>, <code class="language-plaintext highlighter-rouge">update</code>, and <code class="language-plaintext highlighter-rouge">delete</code> actions are similar to typical C(R)UD operations.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">create</code> - <em>Upserts</em> an object. If the object already does exist, <code class="language-plaintext highlighter-rouge">data</code> fields will be <em>merged</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">update</code> - Merges the <code class="language-plaintext highlighter-rouge">data</code> attributes with a currently existing object. To <strong>remove</strong> an attribute, set the value
+           to <code class="language-plaintext highlighter-rouge">null</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">delete</code> - Delete an object. No data field required.</li>
+</ul><hr />
+      <h2 id="object-data-object">
+        
+        
+          <a href="#object-data-object" class="anchor-heading" aria-labelledby="object-data-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “Object Data” object
+        
+        
+      </h2>
+    
+
+<div class="alert-box alert-warning" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          Arbitrary A-Frame Components
+        
+        
+      </h4>
+    
+    
+<p>Some A-Frame attributes and components we don’t officially include in our JSON may be usable by following certain <a href="../developer/aframe">patterns of use</a>. We make no promises!</p>
+
+</div>
+      <h3 id="properties-1">
+        
+        
+          <a href="#properties-1" class="anchor-heading" aria-labelledby="properties-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>object_type</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>A primitive object type: <code class="language-plaintext highlighter-rouge">cube, sphere, circle, cone, cylinder, dodecahedron, icosahedron, tetrahedron, octahedron, plane, ring, torus, torusKnot, triangle</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><em>A/P</em></td>
+      <td> </td>
+      <td>…or, A complex object type: <code class="language-plaintext highlighter-rouge">gltf_model, image, particle, text, line, light, thickline</code></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td><em>A</em></td>
+      <td> </td>
+      <td>…or, A presence object type : <code class="language-plaintext highlighter-rouge">camera, viveLeft, viveRight</code> (<code class="language-plaintext highlighter-rouge">camera</code> is used by web browsers and VIO cameras)</td>
+    </tr>
+    <tr>
+      <td><a href="examples#move">position</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>Position of the object’s origin in 3d, relative to world-origin.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#rotate">rotation</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#rotation-object"><code class="language-plaintext highlighter-rouge">Rotation</code> object</a></td>
+      <td>Quaternion rotation of the object.</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td><em>A/P</em></td>
+      <td><a href="#scale-object"><code class="language-plaintext highlighter-rouge">scale</code> object</a></td>
+      <td>Scale factor of the object in 3d.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#color">color</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>A hexadecimal color or <a href="https://htmlcolorcodes.com/color-names">CSS/HTML color</a> name (<em>default: “#FFFFFF”</em>).</td>
+    </tr>
+    <tr>
+      <td><a href="examples#text">text</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Any <code class="language-plaintext highlighter-rouge">string</code> of <a href="https://aframe.io/docs/1.0.0/components/text.html#non-ascii-characters">ASCII characters</a>. e.g. “Hello world!”</td>
+    </tr>
+    <tr>
+      <td><a href="examples#events">click-listener</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Name of the click-listener, default can be empty string. e.g. “”</td>
+    </tr>
+    <tr>
+      <td><a href="examples#images">url</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>URI, relative or full path of a file. e.g. “store/models/Duck.glb”</td>
+    </tr>
+    <tr>
+      <td><a href="examples#360-video">material</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#material-object"><code class="language-plaintext highlighter-rouge">Material</code> object</a></td>
+      <td>The material properties of the object’s surface.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#images-on-objects">multisrc</a></td>
+      <td><em>A</em></td>
+      <td><a href="#multisrc-object"><code class="language-plaintext highlighter-rouge">Multisrc</code> object</a></td>
+      <td>Define multiple visual sources applied to an object.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#lights">light</a></td>
+      <td><em>A</em></td>
+      <td><a href="#light-object"><code class="language-plaintext highlighter-rouge">Light</code> object</a></td>
+      <td>Properties of a light source. Used by <code class="language-plaintext highlighter-rouge">object_type</code>: <code class="language-plaintext highlighter-rouge">light</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#animate">animation</a></td>
+      <td><em>A</em></td>
+      <td><a href="#animation-object"><code class="language-plaintext highlighter-rouge">Animation</code> object</a></td>
+      <td>Animation rules of an object.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#animating-gltf-models">animation-mixer</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#animation-mixer-object"><code class="language-plaintext highlighter-rouge">Animation-Mixer</code> object</a></td>
+      <td>Animation sequence rules.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#lines">start</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>Starting position of a line. Used by <code class="language-plaintext highlighter-rouge">object_type</code>: <code class="language-plaintext highlighter-rouge">line</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#lines">end</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>Ending position of a line. Used by <code class="language-plaintext highlighter-rouge">object_type</code>: <code class="language-plaintext highlighter-rouge">line</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#thicklines">meshline</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#meshline-object"><code class="language-plaintext highlighter-rouge">Meshline</code> object</a></td>
+      <td>A line type with multiple way-points. Used by <code class="language-plaintext highlighter-rouge">object_type</code>: <code class="language-plaintext highlighter-rouge">thickline</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#sound">sound</a></td>
+      <td><em>A</em></td>
+      <td><a href="#sound-object"><code class="language-plaintext highlighter-rouge">Sound</code> object</a></td>
+      <td>The sound properties of an object. Requires <code class="language-plaintext highlighter-rouge">click-listener</code></td>
+    </tr>
+    <tr>
+      <td><a href="examples#physics">dynamic-body</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#dynamic-body-object"><code class="language-plaintext highlighter-rouge">Dynamic-Body</code> object</a></td>
+      <td>The physics rules an object should obey.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#physics">impulse</a></td>
+      <td><em>A/P</em></td>
+      <td><a href="#impulse-object"><code class="language-plaintext highlighter-rouge">Impulse</code> object</a></td>
+      <td>The force applied using physics. Requires <code class="language-plaintext highlighter-rouge">click-listener</code></td>
+    </tr>
+    <tr>
+      <td><a href="examples#particles">spe-particles</a></td>
+      <td><em>A</em></td>
+      <td><a href="#spe-particles-object"><code class="language-plaintext highlighter-rouge">SPE-Particles</code> object</a></td>
+      <td>Properties of the particles effects component and its animations.</td>
+    </tr>
+    <tr>
+      <td><del><a href="examples#background-themes">environment</a></del></td>
+      <td><em>A</em></td>
+      <td><del><a href="#environment-object"><code class="language-plaintext highlighter-rouge">Environment</code> object</a></del></td>
+      <td><del>Environment options.</del> May be deprecated due to the new <a href="#env-presets-object"><code class="language-plaintext highlighter-rouge">env-presets</code> object</a>.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#events">collision-listener</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Name of the collision-listener, default can be empty string. e.g. “”</td>
+    </tr>
+    <tr>
+      <td><a href="examples#parentchild-linking">parent</a></td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code> of the object which is the parent.</td>
+    </tr>
+    <tr>
+      <td><a href="examples#goto-url">goto-url</a></td>
+      <td><em>A</em></td>
+      <td><a href="#goto-url-object"><code class="language-plaintext highlighter-rouge">Goto URL</code> object</a></td>
+      <td>Requires <code class="language-plaintext highlighter-rouge">click-listener</code></td>
+    </tr>
+    <tr>
+      <td><a href="examples#landmark">landmark</a></td>
+      <td><em>P</em></td>
+      <td><a href="#landmark-object"><code class="language-plaintext highlighter-rouge">Landmark</code> object</a></td>
+      <td>A landmark either as teleport destination or starting point</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="position-object">
+        
+        
+          <a href="#position-object" class="anchor-heading" aria-labelledby="position-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “position” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/position.html">position</a>.</p>
+      <h3 id="properties-2">
+        
+        
+          <a href="#properties-2" class="anchor-heading" aria-labelledby="properties-2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>X-axis distance from origin, in meters (<em>default: 0</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Y-axis distance from origin, in meters (<em>default: 0</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Z-axis distance from origin, in meters (<em>default: 0</em>, <strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="rotation-object">
+        
+        
+          <a href="#rotation-object" class="anchor-heading" aria-labelledby="rotation-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “rotation” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/rotation.html">rotation</a>.</p>
+      <h3 id="properties-3">
+        
+        
+          <a href="#properties-3" class="anchor-heading" aria-labelledby="properties-3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Quaternion rotation around the X-axis (<em>default: 0</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Quaternion rotation around the Y-axis (<em>default: 0</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Quaternion rotation around the Z-axis (<em>default: 0</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>w</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Quaternion value for theta (<em>default: 1</em>, <strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="scale-object">
+        
+        
+          <a href="#scale-object" class="anchor-heading" aria-labelledby="scale-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “scale” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/scale.html">scale</a>.</p>
+      <h3 id="properties-4">
+        
+        
+          <a href="#properties-4" class="anchor-heading" aria-labelledby="properties-4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>X-axis length of object, in meters (<em>default: 1</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Y-axis length of object, in meters (<em>default: 1</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Z-axis length of object, in meters (<em>default: 1</em>, <strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="material-object">
+        
+        
+          <a href="#material-object" class="anchor-heading" aria-labelledby="material-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “material” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/material.html">material</a>.</p>
+      <h3 id="properties-5">
+        
+        
+          <a href="#properties-5" class="anchor-heading" aria-labelledby="properties-5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>URI, relative or full path of an image/video file. e.g. “images/360falls.mp4”</td>
+    </tr>
+    <tr>
+      <td>transparent</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>e.g. true</td>
+    </tr>
+    <tr>
+      <td>opacity</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 0.5</td>
+    </tr>
+    <tr>
+      <td>colorWrite</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>e.g. false</td>
+    </tr>
+    <tr>
+      <td>render-order</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “0”</td>
+    </tr>
+    <tr>
+      <td>side</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “back”</td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>A hexadecimal color or <a href="https://htmlcolorcodes.com/color-names">CSS/HTML color</a> name (<em>default: “#FFFFFF”</em>).</td>
+    </tr>
+    <tr>
+      <td>repeat</td>
+      <td><em>A</em></td>
+      <td><a href="#repeat-object"><code class="language-plaintext highlighter-rouge">Repeat</code> object</a></td>
+      <td>Used by <code class="language-plaintext highlighter-rouge">material</code>: <code class="language-plaintext highlighter-rouge">repeat</code>.</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="repeat-object">
+        
+        
+          <a href="#repeat-object" class="anchor-heading" aria-labelledby="repeat-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “repeat” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/material.html#repeating-textures">repeating-textures</a>.</p>
+      <h3 id="properties-6">
+        
+        
+          <a href="#properties-6" class="anchor-heading" aria-labelledby="properties-6"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 4 (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 4 (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="multisrc-object">
+        
+        
+          <a href="#multisrc-object" class="anchor-heading" aria-labelledby="multisrc-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “multisrc” object
+        
+        
+      </h2>
+    
+      <h3 id="properties-7">
+        
+        
+          <a href="#properties-7" class="anchor-heading" aria-labelledby="properties-7"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>srcspath</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>URI, relative or full path of a directory containing <code class="language-plaintext highlighter-rouge">srcs</code>, e.g. “images/dice/” (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>srcs</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>A comma-delimited list if URIs, e.g. “side1.png, side2.png, side3.png, side4.png, side5.png, side6.png” (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="light-object">
+        
+        
+          <a href="#light-object" class="anchor-heading" aria-labelledby="light-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “light” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/light.html">light</a>.</p>
+      <h3 id="properties-8">
+        
+        
+          <a href="#properties-8" class="anchor-heading" aria-labelledby="properties-8"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ambient, directional, hemisphere, point, spot</code> e.g. “directional” (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="animation-object">
+        
+        
+          <a href="#animation-object" class="anchor-heading" aria-labelledby="animation-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “animation” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/animation.html">animation</a>.</p>
+      <h3 id="properties-9">
+        
+        
+          <a href="#properties-9" class="anchor-heading" aria-labelledby="properties-9"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>property</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “rotation”</td>
+    </tr>
+    <tr>
+      <td>to</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “0 360 0”</td>
+    </tr>
+    <tr>
+      <td>loop</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>e.g. true</td>
+    </tr>
+    <tr>
+      <td>dur</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 10000</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="animation-mixer-object">
+        
+        
+          <a href="#animation-mixer-object" class="anchor-heading" aria-labelledby="animation-mixer-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “animation-mixer” object
+        
+        
+      </h2>
+    
+<p>Follows Don McCurdy’s <a href="https://github.com/n5ro/aframe-extras/tree/master/src/loaders#animation">animation-mixer</a>.</p>
+      <h3 id="properties-10">
+        
+        
+          <a href="#properties-10" class="anchor-heading" aria-labelledby="properties-10"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>clip</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Name of the clip sequence in the GLTF “scene”. e.g. “Take 001”</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="meshline-object">
+        
+        
+          <a href="#meshline-object" class="anchor-heading" aria-labelledby="meshline-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “meshline” object
+        
+        
+      </h2>
+    
+      <h3 id="properties-11">
+        
+        
+          <a href="#properties-11" class="anchor-heading" aria-labelledby="properties-11"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lineWidth</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 11 (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>A hexadecimal color or <a href="https://htmlcolorcodes.com/color-names">CSS/HTML color</a> name (<em>default: “#FFFFFF”</em>, <strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “0 0 0, 0 0 1” (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="sound-object">
+        
+        
+          <a href="#sound-object" class="anchor-heading" aria-labelledby="sound-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “sound” object
+        
+        
+      </h2>
+    
+<p>Follows A-Frame <a href="https://aframe.io/docs/1.0.0/components/sound.html">sound</a>.</p>
+      <h3 id="properties-12">
+        
+        
+          <a href="#properties-12" class="anchor-heading" aria-labelledby="properties-12"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>src</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>URI, relative or full path of a directory containing a sound file, e.g. “audio/toypiano/asharp1.wav” (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>on</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mousedown, mouseup, mouseenter, mouseleave, triggerdown, triggerup, gripdown, gripup, menudown, menuup, systemdown, systemup, trackpaddown, trackpadup</code> (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>positional</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>e.g. true</td>
+    </tr>
+    <tr>
+      <td>poolSize</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 8</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="dynamic-body-object">
+        
+        
+          <a href="#dynamic-body-object" class="anchor-heading" aria-labelledby="dynamic-body-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “dynamic-body” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://github.com/n5ro/aframe-physics-system#dynamic-body-and-static-body">aframe-physics-system</a>.</p>
+      <h3 id="properties-13">
+        
+        
+          <a href="#properties-13" class="anchor-heading" aria-labelledby="properties-13"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, static, dynamic</code> (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="impulse-object">
+        
+        
+          <a href="#impulse-object" class="anchor-heading" aria-labelledby="impulse-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “impulse” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a>.</p>
+      <h3 id="properties-14">
+        
+        
+          <a href="#properties-14" class="anchor-heading" aria-labelledby="properties-14"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>on</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mousedown, mouseup, mouseenter, mouseleave, triggerdown, triggerup, gripdown, gripup, menudown, menuup, systemdown, systemup, trackpaddown, trackpadup</code> (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>force</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “1 50 1” (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>position</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “1 1 1” (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="spe-particles-object">
+        
+        
+          <a href="#spe-particles-object" class="anchor-heading" aria-labelledby="spe-particles-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “spe-particles” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://github.com/harlyq/aframe-spe-particles-component#aframe-spe-particles-component">aframe-spe-particles-component</a>.</p>
+      <h3 id="properties-15">
+        
+        
+          <a href="#properties-15" class="anchor-heading" aria-labelledby="properties-15"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>texture</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “textures/square.png”</td>
+    </tr>
+    <tr>
+      <td>color</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “yellow, red”</td>
+    </tr>
+    <tr>
+      <td>particleCount</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 3</td>
+    </tr>
+    <tr>
+      <td>maxAge</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 0.5</td>
+    </tr>
+    <tr>
+      <td>maxAgeSpread</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 1</td>
+    </tr>
+    <tr>
+      <td>velocity</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “40 200 40”</td>
+    </tr>
+    <tr>
+      <td>velocitySpread</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “10 3 10”</td>
+    </tr>
+    <tr>
+      <td>wiggle</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “50 0 50”</td>
+    </tr>
+    <tr>
+      <td>wiggleSpread</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “15 0 15”</td>
+    </tr>
+    <tr>
+      <td>emitterScale</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 8</td>
+    </tr>
+    <tr>
+      <td>sizeSpread</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>e.g. 10</td>
+    </tr>
+    <tr>
+      <td>randomizeVelocity</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>e.g. true</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="environment-object">
+        
+        
+          <a href="#environment-object" class="anchor-heading" aria-labelledby="environment-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “environment” object
+        
+        
+      </h2>
+    
+      <h3 id="properties-16">
+        
+        
+          <a href="#properties-16" class="anchor-heading" aria-labelledby="properties-16"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>preset</td>
+      <td><em>A/P</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. <code class="language-plaintext highlighter-rouge">none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris</code> (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="goto-url-object">
+        
+        
+          <a href="#goto-url-object" class="anchor-heading" aria-labelledby="goto-url-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “goto-url” object
+        
+        
+      </h2>
+    
+      <h3 id="properties-17">
+        
+        
+          <a href="#properties-17" class="anchor-heading" aria-labelledby="properties-17"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dest</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">popup, newtab, sametab</code> e.g. “sametab” (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>on</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “mousedown” (<strong>required</strong>).</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>e.g. “http://www.formula1.com” (<strong>required</strong>).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="landmark-object">
+        
+        
+          <a href="#landmark-object" class="anchor-heading" aria-labelledby="landmark-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “landmark” object
+        
+        
+      </h2>
+    
+      <h3 id="properties-18">
+        
+        
+          <a href="#properties-18" class="anchor-heading" aria-labelledby="properties-18"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>label</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Label that shows up in landmarks list on bottom left of UI</td>
+    </tr>
+    <tr>
+      <td>randomRadiusMin</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Random radius min distance to teleport</td>
+    </tr>
+    <tr>
+      <td>randomRadiusMax</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Random radius max distance to teleport. Can be equal value as radius min, to enforce a circle of particular radius.</td>
+    </tr>
+    <tr>
+      <td>lookAtLandmark</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>When used with an offsetPosition or randomRadius, whether to rotate user camera to look at the landmark base position.</td>
+    </tr>
+    <tr>
+      <td>startingPosition</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>Whether to use this as a random starting position. Does <em>not</em> show up on landmarks list regardless of <code class="language-plaintext highlighter-rouge">label</code></td>
+    </tr>
+    <tr>
+      <td>offsetPosition</td>
+      <td><em>A</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>Additive offset from object base position to teleport to e.g. <code class="language-plaintext highlighter-rouge">{ x: 3, y: 0, z: -1 }</code></td>
+    </tr>
+    <tr>
+      <td>constrainToNavMesh</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>One of <code class="language-plaintext highlighter-rouge">false</code>, <code class="language-plaintext highlighter-rouge">any</code> or <code class="language-plaintext highlighter-rouge">coplanar</code> to describe how a teleport should forcibly behave relative to a navigation mesh. <code class="language-plaintext highlighter-rouge">false</code> implies no forced constraint, <code class="language-plaintext highlighter-rouge">any</code> snaps to nearest navMesh, and <code class="language-plaintext highlighter-rouge">coplanar</code> only snaps to nearest navMeshes on <em>same</em> Y-plane</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+      <h2 id="event-data-object">
+        
+        
+          <a href="#event-data-object" class="anchor-heading" aria-labelledby="event-data-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “Event Data” object
+        
+        
+      </h2>
+    
+      <h3 id="properties-19">
+        
+        
+          <a href="#properties-19" class="anchor-heading" aria-labelledby="properties-19"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>position</td>
+      <td><em>A</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>The event destination position. (<strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>clickPos</td>
+      <td><em>A</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>The event origination position. (<strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>source</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">object_id</code> of event origination. e.g “camera_8715_er1k” (<strong>required</strong>)</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+      <h2 id="program-data-object">
+        
+        
+          <a href="#program-data-object" class="anchor-heading" aria-labelledby="program-data-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “Program Data” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://arenaxr.org/build/arena-program.json">ARENA Program Schema</a></p>
+      <h3 id="properties-20">
+        
+        
+          <a href="#properties-20" class="anchor-heading" aria-labelledby="properties-20"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Name of the program in the format namespace/program-name. e.g. “wiselab/arb” (<strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>affinity</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Indicates the module affinity (client=client’s runtime; none or empty=any suitable/available runtime) (<em>default: “client”</em>)</td>
+    </tr>
+    <tr>
+      <td>instantiate</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Single instance of the program (=single), or let every client create a program instance (=client). Per client instance will create new uuid for each program. (<em>default: “client”</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>filename</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Filename of the entry binary. e.g. “arb.py” (<strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>filetype</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Type of the program (WA=WASM or PY=Python) (<em>default: “PY”</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>args</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code> array</td>
+      <td>Command-line arguments (passed in argv). Supports variables: ${scene}, ${mqtth}, ${cameraid}, ${username}, ${runtimeid}, ${moduleid}, ${query-string-key} e.g. [ “${scene}”, “-b”, “ ${mqtth}” ]</td>
+    </tr>
+    <tr>
+      <td>env</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code> array</td>
+      <td>Environment variables. Supports variables: ${scene}, ${mqtth}, ${cameraid}, ${username}, ${runtimeid}, ${moduleid}, ${query-string-key} (<em>default: [ “MID=${moduleid}”, “SCENE=${scene}”, “MQTTH=${mqtth}”, “REALM=realm” ]</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>channels</td>
+      <td><em>A</em></td>
+      <td><a href="#channel-object"><code class="language-plaintext highlighter-rouge">Channel</code> object</a> array</td>
+      <td>Channels describe files representing access to IO from pubsub and client sockets (possibly more in the future; currently only supported for WASM programs).</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="channel-object">
+        
+        
+          <a href="#channel-object" class="anchor-heading" aria-labelledby="channel-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “channel” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://arenaxr.org/build/arena-program.json">ARENA Program Schema</a></p>
+      <h3 id="properties-21">
+        
+        
+          <a href="#properties-21" class="anchor-heading" aria-labelledby="properties-21"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>path</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Folder visible by the program. (<em>default: “/ch/${scene}”</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Pubsub or client socket. [ “pubsub”, “client” ] (<em>default: “pubsub”</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>mode</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Access mode. [ “r”, “w”, “rw” ] (<em>default: “rw”</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>params</td>
+      <td><em>A</em></td>
+      <td><a href="#params-object"><code class="language-plaintext highlighter-rouge">Params</code> object</a></td>
+      <td>Type (i.e. pubsub/client)-specific parameters.</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="params-object">
+        
+        
+          <a href="#params-object" class="anchor-heading" aria-labelledby="params-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “params” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://arenaxr.org/build/arena-program.json">ARENA Program Schema</a></p>
+      <h3 id="properties-22">
+        
+        
+          <a href="#properties-22" class="anchor-heading" aria-labelledby="properties-22"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>topic</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Pubsub topic (pubsub) (<em>default: “realm/s/${scene}”</em>)</td>
+    </tr>
+    <tr>
+      <td>host</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Destination host address (client socket; ignored for now)</td>
+    </tr>
+    <tr>
+      <td>port</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Destination port (client socket; ignored for now)</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+      <h2 id="scene-options-data-object">
+        
+        
+          <a href="#scene-options-data-object" class="anchor-heading" aria-labelledby="scene-options-data-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “Scene Options Data” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://arenaxr.org/build/arena-scene-options.json">ARENA Scene Options Schema</a></p>
+      <h3 id="properties-23">
+        
+        
+          <a href="#properties-23" class="anchor-heading" aria-labelledby="properties-23"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>env-presets</td>
+      <td><em>A</em></td>
+      <td><a href="#env-presets-object"><code class="language-plaintext highlighter-rouge">env-presets</code> object</a></td>
+      <td>Environment presets.</td>
+    </tr>
+    <tr>
+      <td>scene-options</td>
+      <td><em>A</em></td>
+      <td><a href="#scene-options-object"><code class="language-plaintext highlighter-rouge">scene-options</code> object</a></td>
+      <td>Scene Options.</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="env-presets-object">
+        
+        
+          <a href="#env-presets-object" class="anchor-heading" aria-labelledby="env-presets-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “env-presets” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://arenaxr.org/build/arena-scene-options.json">ARENA Scene Options Schema</a> from the <a href="https://github.com/supermedium/aframe-environment-component">aframe-environment-component</a>.</p>
+      <h3 id="properties-24">
+        
+        
+          <a href="#properties-24" class="anchor-heading" aria-labelledby="properties-24"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>active</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>Show/hides the environment presets component. Use this instead of using the visible attribute. (<em>default: true</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>preset</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, arches, threetowers, poison, tron, japan, dream, volcano, starry, osiris</code>; An A-Frame preset environment. (<em>default: “default”</em>, <strong>required</strong>)</td>
+    </tr>
+    <tr>
+      <td>seed</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Seed for randomization. If you don’t like the layout of the elements, try another value for the seed. (<em>default: 1</em>)</td>
+    </tr>
+    <tr>
+      <td>skyType</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, color, gradient, atmosphere</code>; a sky type. (<em>default: “color”</em>)</td>
+    </tr>
+    <tr>
+      <td>skyColor</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Sky color. (<em>default: “#ffa500”</em>)</td>
+    </tr>
+    <tr>
+      <td>horizonColor</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Horizon color. (<em>default: “#ffa500”</em>)</td>
+    </tr>
+    <tr>
+      <td>lighting</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, distant, point</code>; A hemisphere light and a key light (directional or point) are added to the scene automatically when using the component. Use none if you don’t want this automatic lighting set being added. The color and intensity are estimated automatically. (<em>default: “distant”</em>)</td>
+    </tr>
+    <tr>
+      <td>shadow</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>Shadows on/off. Sky light casts shadows on the ground of all those objects with shadow component applied. (<em>default: false</em>)</td>
+    </tr>
+    <tr>
+      <td>shadowSize</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Size of the shadow, if applied. (<em>default: 10</em>)</td>
+    </tr>
+    <tr>
+      <td>lightPosition</td>
+      <td><em>A</em></td>
+      <td><a href="#position-object"><code class="language-plaintext highlighter-rouge">Position</code> object</a></td>
+      <td>Position of the main light. If skyType is atmospheric, only the orientation matters (is a directional light) and it can turn the scene into night when lowered towards the horizon. (<em>default: {“x”: 0, “y”: 1, “z”: -0.2}</em>)</td>
+    </tr>
+    <tr>
+      <td>fog</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Amount of fog (0 = none, 1 = full fog). The color is estimated automatically. (<em>default: 0</em>)</td>
+    </tr>
+    <tr>
+      <td>flatShading</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>Whether to show everything smoothed (false) or polygonal (true). (<em>default: false</em>)</td>
+    </tr>
+    <tr>
+      <td>playArea</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Radius of the area in the center reserved for the player and the game play. The ground is flat in there and no objects are placed inside. (<em>default: 1</em>)</td>
+    </tr>
+    <tr>
+      <td>ground</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, flat, hills, canyon, spikes, noise</code>; Orography style. (<em>default: “hills”</em>)</td>
+    </tr>
+    <tr>
+      <td>groundScale</td>
+      <td><em>A</em></td>
+      <td><a href="#scale-object"><code class="language-plaintext highlighter-rouge">scale</code> object</a></td>
+      <td>Ground dimensions (in meters). (<em>default: {“x”: 1, “y”: 1, “z”: 1}</em>)</td>
+    </tr>
+    <tr>
+      <td>groundYScale</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Maximum height (in meters) of ground’s features (hills, mountains, peaks..). (<em>default: 3</em>)</td>
+    </tr>
+    <tr>
+      <td>groundTexture</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, checkerboard, squares, walkernoise</code>; Texture applied to the ground. (<em>default: “none”</em>)</td>
+    </tr>
+    <tr>
+      <td>groundColor</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Main color of the ground. (<em>default: “#553e35”</em>)</td>
+    </tr>
+    <tr>
+      <td>groundColor2</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Secondary color of the ground. Used for textures, ignored if groundTexture is none. (<em>default: “#694439”</em>)</td>
+    </tr>
+    <tr>
+      <td>dressing</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, cubes, pyramids, cylinders, hexagons, stones, trees, mushrooms, towers, apparatus, arches, torii</code>; Dressing is the term we use here for the set of additional objects that are put on the ground for decoration. (<em>default: “none”</em>)</td>
+    </tr>
+    <tr>
+      <td>dressingAmount</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code> of objects used for dressing. (<em>default: 10</em>)</td>
+    </tr>
+    <tr>
+      <td>dressingColor</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Base color of dressing objects. (<em>default: “#795449”</em>)</td>
+    </tr>
+    <tr>
+      <td>dressingScale</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Height (in meters) of dressing objects. (<em>default: 5</em>)</td>
+    </tr>
+    <tr>
+      <td>dressingVariance</td>
+      <td><em>A</em></td>
+      <td><a href="#scale-object"><code class="language-plaintext highlighter-rouge">Scale</code> object</a></td>
+      <td>Maximum x,y,z meters to randomize the size and rotation of each dressing object. Use 0 0 0 for no variation in size nor rotation. (<em>default: {“x”: 1, “y”: 1, “z”: 1}</em>)</td>
+    </tr>
+    <tr>
+      <td>dressingUniformScale</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>If false, a different value is used for each coordinate x, y, z in the random variance of size. (<em>default: true</em>)</td>
+    </tr>
+    <tr>
+      <td>dressingOnPlayArea</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Amount of dressing on play area. (<em>default: 0</em>)</td>
+    </tr>
+    <tr>
+      <td>grid</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">none, 1x1, 2x2, crosses, dots, xlines, ylines</code>; Grid, 1x1 and 2x2 are rectangular grids of 1 and 2 meters side, respectively. (<em>default: “none”</em>)</td>
+    </tr>
+    <tr>
+      <td>gridColor</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Color of the grid. (<em>default: “#ccc”</em>)</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="scene-options-object">
+        
+        
+          <a href="#scene-options-object" class="anchor-heading" aria-labelledby="scene-options-object"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> “scene-options” object
+        
+        
+      </h2>
+    
+<p>Follows <a href="https://arenaxr.org/build/arena-scene-options.json">ARENA Scene Options Schema</a></p>
+      <h3 id="properties-25">
+        
+        
+          <a href="#properties-25" class="anchor-heading" aria-labelledby="properties-25"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> properties
+        
+        
+      </h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>property</th>
+      <th>support</th>
+      <th>type</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>jitsiServer</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Jitsi host used for this scene. (<em>default: “mr.andrew.cmu.edu”</em>)</td>
+    </tr>
+    <tr>
+      <td>bigscreen</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Name of the 3D object used as a big screen when sharing desktop. (<em>default: “bigscreen”</em>)</td>
+    </tr>
+    <tr>
+      <td>clickableOnlyEvents</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>true = publish only mouse events for objects with click-listeners; false = all objects publish mouse events. (<em>default: “true”</em>)</td>
+    </tr>
+    <tr>
+      <td>privateScene</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">boolean</code></td>
+      <td>false = scene will be visible; true = scene will not show in listings. (<em>default: “false”</em>)</td>
+    </tr>
+    <tr>
+      <td>speedModifier</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Movement speed mulitiplier to base <code class="language-plaintext highlighter-rouge">30</code>. (e.g. <code class="language-plaintext highlighter-rouge">speedModifier: 2</code> results in <code class="language-plaintext highlighter-rouge">60</code> speed)</td>
+    </tr>
+    <tr>
+      <td>navMesh</td>
+      <td><em>A</em></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>URL of gltf model to preload as nav-mesh</td>
+    </tr>
+  </tbody>
+</table></div>
+
+        
+
+        
+
+        
+          <hr>
+          <footer>
+            
+            
+              <p class="text-small text-grey-dk-000 mb-0">Copyright &copy; 2020-2021, CONIX Research Center</p>
+            
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+

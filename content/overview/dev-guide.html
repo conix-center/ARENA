@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+    <title>Develop Python Programs - ARENA Documentation</title>
+
+    
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Develop Python Programs | ARENA Documentation</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Develop Python Programs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tutorials and Reference for the ARENA project." />
+<meta property="og:description" content="Tutorials and Reference for the ARENA project." />
+<link rel="canonical" href="https://arena.conix.io/content/overview/dev-guide.html" />
+<meta property="og:url" content="https://arena.conix.io/content/overview/dev-guide.html" />
+<meta property="og:site_name" content="ARENA Documentation" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Develop Python Programs" />
+<script type="application/ld+json">
+{"description":"Tutorials and Reference for the ARENA project.","url":"https://arena.conix.io/content/overview/dev-guide.html","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arena.conix.io/xr-logo.png"}},"headline":"Develop Python Programs","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://arena.conix.io/" class="site-title lh-tight">
+  <div class="site-logo"></div>
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="https://arena.conix.io/" class="nav-list-link">The ARENA</a></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/overview/" class="nav-list-link">Overview</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/user-guide.html" class="nav-list-link">First Time in the ARENA</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/build.html" class="nav-list-link">Build Scenes</a></li><li class="nav-list-item  active"><a href="https://arena.conix.io/content/overview/dev-guide.html" class="nav-list-link active">Develop Python Programs</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/screenshare.html" class="nav-list-link">ARENA Screenshare</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/overview/next.html" class="nav-list-link">Next Steps</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/pubsub.html" class="nav-list-link">MQTT</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/platforms.html" class="nav-list-link">Cross Platform Support</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/architecture/coordinate-frame.html" class="nav-list-link">Coordinate Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/source.html" class="nav-list-link">Source and Links</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/messaging/" class="nav-list-link">Messaging Format</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/examples.html" class="nav-list-link">Examples</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/definitions.html" class="nav-list-link">JSON Spec</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/messaging/arena-aframe-components.html" class="nav-list-link">ARENA A-Frame Components</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/python/" class="nav-list-link">Python Library</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/python/scenes.html" class="nav-list-link">Scenes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/objects.html" class="nav-list-link">Objects</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/attributes.html" class="nav-list-link">Attributes</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/events.html" class="nav-list-link">Events</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/tasks.html" class="nav-list-link">Tasks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/callbacks.html" class="nav-list-link">Scene Callbacks</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/python/animations.html" class="nav-list-link">Animations and Morphs</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/3d-content/" class="nav-list-link">3D Content</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/unity.html" class="nav-list-link">Exporting from Unity</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/gltf-files.html" class="nav-list-link">GLTF Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/downscaling.html" class="nav-list-link">Downscaling Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/dimension.html" class="nav-list-link">Converting SketchUp Files</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/animated-models.html" class="nav-list-link">Animated Models</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/3d-content/mesh-nav.html" class="nav-list-link">Navigation Meshes</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/localization/" class="nav-list-link">Localization & Tracking</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optitrack.html" class="nav-list-link">Opititrack</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/optical-markers.html" class="nav-list-link">Optical Markers</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/localization/uwb.html" class="nav-list-link">UWB</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/user-security/" class="nav-list-link">Users & Security</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-presence.html" class="nav-list-link">User Presence</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/user-account.html" class="nav-list-link">User Account</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/user-security/security.html" class="nav-list-link">Security</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/tools/" class="nav-list-link">Tools</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/persistence.html" class="nav-list-link">Persistence DB</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/localizer.html" class="nav-list-link">Localizer</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/filestore.html" class="nav-list-link">File Store</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/authoring.html" class="nav-list-link">Authoring Program</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/atlas.html" class="nav-list-link">ATLAS</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/tools/params.html" class="nav-list-link">URL Parameters</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/arts/" class="nav-list-link">ARENA Runtime Supervisor</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/mqtt-broker.html" class="nav-list-link">MQTT Broker</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/runtime.html" class="nav-list-link">Runtime</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/arts/python.html" class="nav-list-link">Program Launch Example</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="https://arena.conix.io/content/developer/" class="nav-list-link">Developers</a><ul class="nav-list "><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/threejs.html" class="nav-list-link">Three.js</a></li><li class="nav-list-item "><a href="https://arena.conix.io/content/developer/aframe.html" class="nav-list-link">A-Frame</a></li></ul></li><li class="nav-list-item"><a href="https://arena.conix.io/content/contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="https://arena.conix.io/content/troubleshooting.html" class="nav-list-link">Troubleshooting</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ARENA Documentation" aria-label="Search ARENA Documentation" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            
+              <li class="aux-nav-list-item">
+                <a href="https://arenaxr.org/" class="site-button"
+                  
+                >
+                  The ARENA
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://conix.io/arena" class="site-button"
+                  
+                >
+                  CONIX Research Center
+                </a>
+              </li>
+            
+              <li class="aux-nav-list-item">
+                <a href="https://github.com/conix-center/" class="site-button"
+                  
+                >
+                  Our GitHub
+                </a>
+              </li>
+            
+          </ul>
+        </nav>
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://arena.conix.io/content/overview/">Overview</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Develop Python Programs</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <h1 id="introduction-to-arena-python-program-development">
+        
+        
+          <a href="#introduction-to-arena-python-program-development" class="anchor-heading" aria-labelledby="introduction-to-arena-python-program-development"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Introduction to ARENA Python Program Development
+        
+        
+      </h1>
+    
+
+<div class="alert-box alert-note" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          note
+        
+        
+      </h4>
+    
+    
+<p>We recommend the <a href="/content/overview">ARENA Overview</a> to learn the about the main concepts of the ARENA.</p>
+
+</div>
+
+<p>You can define the appearance and behavior of objects in a scene using python programs, which take advantage of the fact that all objects in a scene are networked via a MQTT Publish-Subscribe (PubSub) messaging bus:</p>
+
+<p><img src="/assets/img/overview/python-mqtt.png" width="500" /></p>
+
+<p>Note that the python program can be hosted anywhere with access to the MQTT bus. For simplicity, we will assume that your program is running on your local machine. However, the execution and hosting of programs can be handled by the ARENA itself, using ARTS.</p>
+      <h2 id="install-the-arena-python-library">
+        
+        
+          <a href="#install-the-arena-python-library" class="anchor-heading" aria-labelledby="install-the-arena-python-library"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Install the ARENA Python library
+        
+        
+      </h2>
+    
+
+<p>The easiest way to begin programming in the ARENA is to install the <a href="../python">Python library</a> and create your first Python program. ARENA programs communicate over MQTT messages which govern all objects and their properties. This library is a wrapper which will allow you to easily send and receive those messages.</p>
+
+<div class="alert-box alert-tip" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          tip
+        
+        
+      </h4>
+    
+    
+<p>Use the <strong>Search ARENA Documentation</strong> bar at the very top of every page on this site to find examples and information on anything you need.</p>
+
+</div>
+      <h2 id="create-a-box-and-observe">
+        
+        
+          <a href="#create-a-box-and-observe" class="anchor-heading" aria-labelledby="create-a-box-and-observe"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Create a box and observe
+        
+        
+      </h2>
+    
+
+<p>Now, let us create a very simple Python program in the scene <b>example</b>, under the <a href="/content/overview/user-guide.html#arena-username">username you defined the first time you entered the arena</a>. Start by opening the scene in your browser and notice it is empty, with default environment settings.</p>
+
+<div class="alert-box alert-note" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          note
+        
+        
+      </h4>
+    
+    
+<p>Open the <b>example</b> scene under your arena username by entering the following URL in your browser: <code class="language-plaintext highlighter-rouge">http://arenaxr.org/&lt;your-username&gt;/example</code></p>
+
+</div>
+
+<p>Copy the python script below, and paste it into a <code class="language-plaintext highlighter-rouge">box.py</code> file. After saving the file, execute the script (e.g. <code class="language-plaintext highlighter-rouge">python3 box.py</code>; make sure you installed the <a href="/content/python/">python library</a> first).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">arena</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># this creates an object for scene 'example' at the given arena host
+</span><span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">"arenaxr.org"</span><span class="p">,</span> <span class="n">scene</span><span class="o">=</span><span class="s">"example"</span><span class="p">)</span>
+
+<span class="c1"># define a task that will add a box to the scene
+</span><span class="o">@</span><span class="n">scene</span><span class="p">.</span><span class="n">run_once</span>
+<span class="k">def</span> <span class="nf">make_box</span><span class="p">():</span>
+    <span class="n">scene</span><span class="p">.</span><span class="n">add_object</span><span class="p">(</span><span class="n">Box</span><span class="p">())</span>
+
+<span class="c1"># run the tasks defined for this scene
+</span><span class="n">scene</span><span class="p">.</span><span class="n">run_tasks</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Looking at the scene in your browser will let you see the box. Watch out, if you are at the origin, the box will be underneath you.</p>
+
+<p><img src="../../../assets/img/overview/devguide/box.png" alt="" /></p>
+
+<p>By default, objects are generated in a random color, with no rotation, at x, y, z position (0, 0, 0), and with no other properties applied. Some of the other properties you can add to objects are detailed in our <a href="../python/objects">Python Examples</a>. Notice that the box seems stuck in the ground, which is due to the box’s origin at its center positioned at scene coordinates (0, 0, 0). If you enable Flying mode (see <a href="user-guide">User Guide</a>), you can move below the ground plane and view the other half of the box. Type Ctrl-C to end the program.</p>
+
+<p>Now, go back to your browser and <b>refresh</b> the page. You will notice that the box disappeared. We will explain what is up with that in <a href="#use-persistence-reload-browser">a moment</a>. Now, let us create two boxes, one at x, y, z (1, 1, 1) and another at x, y, z (2, 2, 2).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">arena</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">"arenaxr.org"</span><span class="p">,</span> <span class="n">scene</span><span class="o">=</span><span class="s">"example"</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">scene</span><span class="p">.</span><span class="n">run_once</span>
+<span class="k">def</span> <span class="nf">make_box</span><span class="p">():</span>
+    <span class="c1"># red box at (1, 1, -3)
+</span>    <span class="n">box1</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">Position</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="n">material</span><span class="o">=</span><span class="n">Material</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+    <span class="n">scene</span><span class="p">.</span><span class="n">add_object</span><span class="p">(</span><span class="n">box1</span><span class="p">)</span>
+    <span class="c1"># green box at (2, 2, -3)
+</span>    <span class="n">box2</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="n">Position</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="n">material</span><span class="o">=</span><span class="n">Material</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+    <span class="n">scene</span><span class="p">.</span><span class="n">add_object</span><span class="p">(</span><span class="n">box2</span><span class="p">)</span>
+
+<span class="n">scene</span><span class="p">.</span><span class="n">run_tasks</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Once you run the script above, you can go back to the scene <b>example</b> in your browser to see the two boxes:</p>
+
+<p><img src="../../../assets/img/overview/devguide/two-boxes.png" alt="" /></p>
+      <h2 id="running-from-the-command-line">
+        
+        
+          <a href="#running-from-the-command-line" class="anchor-heading" aria-labelledby="running-from-the-command-line"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Running from the Command Line
+        
+        
+      </h2>
+    
+<p>The target of which server, user and scene are set by the <code class="language-plaintext highlighter-rouge">Scene(host="...",scene="...",namespace="...",debug=False)</code> function call.  It is also possible to override these using shell environmental variables at the command line as shown below.  This allows a simple way to re-target applications for your own environment without having to change the parameters manually in the code.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">MQTTH</span><span class="o">=</span>arenaxr.org
+<span class="nb">export </span><span class="nv">REALM</span><span class="o">=</span>realm
+<span class="nb">export </span><span class="nv">SCENE</span><span class="o">=</span>scene
+<span class="nb">export </span><span class="nv">NAMESPACE</span><span class="o">=</span>namespace
+python3 box.py
+...
+<span class="o">=====</span>
+Loading: https://arenaxr.org/namespace/scene, <span class="nv">realm</span><span class="o">=</span>realm
+Connecting to the ARENA...
+Connected!
+<span class="o">=====</span>
+...
+</code></pre></div></div>
+<p>If not specified the namespace is your current logged in user-id. The most common use-case is to simply update <code class="language-plaintext highlighter-rouge">SCENE</code> and <code class="language-plaintext highlighter-rouge">MQTTH</code>.</p>
+      <h2 id="clients-and-scene-callbacks">
+        
+        
+          <a href="#clients-and-scene-callbacks" class="anchor-heading" aria-labelledby="clients-and-scene-callbacks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Clients and Scene Callbacks
+        
+        
+      </h2>
+    
+
+<p>As a web browser user of the ARENA, you are connecting to the ARENA MQTT broker as one client connection, in which you are publishing your “camera” perspective as you move, and subscribing to changes in other objects and other users’ “camera” moves. Every time you run a Python program you are also connecting to the broker as another client connection, in which the above program published a message creating a box, and also subscribes you other users “camera” moves, and objects.</p>
+
+<p>Let’s try observing some of those other messages but adding the following code to your Python program. Add the <code class="language-plaintext highlighter-rouge">scene_callback</code> function, and also alter your <code class="language-plaintext highlighter-rouge">arena.init()</code> call, to accept the new callback and allow you to observe all the messages you have subscribed to in this scene.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">on_msg_callback</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"scene_callback: "</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+
+<span class="n">scene</span><span class="p">.</span><span class="n">on_msg_callback</span> <span class="o">=</span> <span class="n">on_msg_callback</span>
+</code></pre></div></div>
+
+<p>Move yourself around in the browser view and notice all the camera updates and positions and rotation changes as you move. This is way too much information to be human readable! However, you can filter out these messages for what you need, or even better, if you only need feedback for a specific object, like our box, as we cover next.</p>
+      <h2 id="object-callbacks">
+        
+        
+          <a href="#object-callbacks" class="anchor-heading" aria-labelledby="object-callbacks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Object callbacks
+        
+        
+      </h2>
+    
+
+<p>One way to reduce the flood of messages for your Python program is to define a callback specifically for one object, our box for example. Update your program to comment out all messages subscribed in the scene, add a callback just for your box object, and update the creation of your box object with a click-listener and the new <code class="language-plaintext highlighter-rouge">box_callback</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">on_msg_callback</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+<span class="c1">#    print("scene_callback: ", obj)
+</span>
+<span class="k">def</span> <span class="nf">box_callback</span><span class="p">(</span><span class="n">evt</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"box_callback: "</span><span class="p">,</span> <span class="n">evt</span><span class="p">)</span>
+
+<span class="n">box</span> <span class="o">=</span> <span class="n">Box</span><span class="p">(</span><span class="n">clickable</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">evt_handler</span><span class="o">=</span><span class="n">box_callback</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now, in your scene use your mouse to click on the box and notice the messages you receive just from the box. You have useful information like: what type of event - mouse up/down/enter/leave, the owner of the event, the position of the owner, the position of the click. You can use this information to programmatically decide how to respond and begin creating a rich, interactive, 3d experience for your users.</p>
+
+<ul>
+  <li>What should <code class="language-plaintext highlighter-rouge">mousedown</code> do for this object? Change its color?</li>
+  <li>What should <code class="language-plaintext highlighter-rouge">mouseenter</code> or <code class="language-plaintext highlighter-rouge">mouseleave</code> do? Change its opacity?</li>
+  <li>Many more ideas are available in our <a href="../python/events">examples</a>.</li>
+</ul>
+      <h2 id="animate-a-gltf-model">
+        
+        
+          <a href="#animate-a-gltf-model" class="anchor-heading" aria-labelledby="animate-a-gltf-model"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Animate a GLTF model
+        
+        
+      </h2>
+    
+
+<p>A more advanced manipulation of objects in the ARENA is using 3d models as <a href="../3d-content/gltf-files">GLTF</a>. Here we are going to use a GLTF model of a duck and some animation rules to make it rotate.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">arena</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">"arenaxr.org"</span><span class="p">,</span> <span class="n">scene</span><span class="o">=</span><span class="s">"example"</span><span class="p">)</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">GLTF</span><span class="p">(</span><span class="n">object_id</span><span class="o">=</span><span class="s">"duck_1"</span><span class="p">,</span>
+            <span class="n">position</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">),</span>
+            <span class="n">url</span><span class="o">=</span><span class="s">"store/models/Duck.glb"</span><span class="p">)</span>
+<span class="n">obj</span><span class="p">.</span><span class="n">dispatch_animation</span><span class="p">(</span>
+        <span class="n">Animation</span><span class="p">(</span>
+            <span class="nb">property</span><span class="o">=</span><span class="s">"rotation"</span><span class="p">,</span>
+            <span class="n">start</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">end</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">easing</span><span class="o">=</span><span class="s">"linear"</span><span class="p">,</span>
+            <span class="n">dur</span><span class="o">=</span><span class="mi">1000</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">run_animations</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="n">scene</span><span class="p">.</span><span class="n">run_tasks</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>At your leisure, read more about methods to generate <a href="../3d-content">3d content</a> and <a href="../3d-content/animated-models">animate</a> objects and models.</p>
+
+<p><img src="../../../assets/img/overview/animate.png" alt="" /></p>
+      <h2 id="use-persistence-reload-browser">
+        
+        
+          <a href="#use-persistence-reload-browser" class="anchor-heading" aria-labelledby="use-persistence-reload-browser"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Use persistence, reload browser
+        
+        
+      </h2>
+    
+
+<p>Up until now, everything you have created has been non-persistent. That is, objects are only rendered in real-time for any browsers open to the <code class="language-plaintext highlighter-rouge">example</code> as MQTT messages are received. So, if you refresh your browser, notice that all the objects we created are gone, new visitors to this scene will not see them. To backup your scene objects into our <a href="../tools/persistence">persistence database</a> you will have to specify <code class="language-plaintext highlighter-rouge">persist=True</code> in <a href="../python/attributes">Python definitions</a>. This is also true to when ARENA objects are created in other. The underlying message needs to specify if the object state is to be persisted or not.</p>
+
+<p>Go back to the previous python code and try to add <code class="language-plaintext highlighter-rouge">persist=True</code> to the duck object:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>obj = Model(object_id="duck_1",
+            position=(-1, 1, -3),
+            url="store/models/Duck.glb"
+            persit=True)
+</code></pre></div></div>
+
+<p>If you run the program again, you will notice that the duck remains in the scene, even across a refresh.</p>
+      <h2 id="debug-your-scene-with-a-frame-scene-inspector">
+        
+        
+          <a href="#debug-your-scene-with-a-frame-scene-inspector" class="anchor-heading" aria-labelledby="debug-your-scene-with-a-frame-scene-inspector"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Debug your scene with A-Frame Scene Inspector
+        
+        
+      </h2>
+    
+<p>Since the ARENA’s rendering uses the A-Frame web 3D rendering engine, you can open the <a href="https://aframe.io/docs/1.0.0/introduction/visual-inspector-and-dev-tools.html">A-Frame Scene Inspector</a> on any scene to examine and manipulate any of the A-Frame elements in your scene.  Try this now from your example scene by typing <code class="language-plaintext highlighter-rouge">&lt;ctrl&gt; + &lt;alt&gt; + i</code> on most systems.</p>
+
+<p>Examine the list of elements on the left side. Each element or object you select will show it’s details and attributes on the right side. You may edit any attributes here you wish, however, remember that the A-Frame Scene Inspector will not persist any changes to the persistence database. We do have a way to visually manipulate objects and save changes that we will share next.</p>
+
+<p><img src="../../../assets/img/overview/inspector.png" alt="" /></p>
+      <h2 id="ar-builder-visual-content-authoring">
+        
+        
+          <a href="#ar-builder-visual-content-authoring" class="anchor-heading" aria-labelledby="ar-builder-visual-content-authoring"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> AR Builder, visual content authoring
+        
+        
+      </h2>
+    
+<p>We also have a Python program, <a href="../tools/authoring">AR Builder (ARB)</a>, which you can use to create and edit objects for your scene. You can use it in VR (virtual reality) as a way to edit your scene and save changes to the persistence database. Importantly, you can use it in AR (augmented reality) in combination with <a href="https://createwebxr.com/webAR.html">AR-supported browsers</a> and <a href="../localization">localization techniques</a> to anchor scene objects in physical space.</p>
+
+<div class="alert-box alert-note" role="alert">
+      <h4 class="alert-heading">
+        
+        
+          note
+        
+        
+      </h4>
+    
+    
+<p>AR-supported browsers still need customization from our lab to support visual localization tags.</p>
+
+</div>
+
+<p>In either case, ARB allows any user in the scene to edit, so it can be used collaboratively by multiple users remotely as VR, in person as AR, or as XR (mixed reality), a combination of both.</p>
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/bYantKzkTFk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</figure>
+
+        
+
+        
+
+        
+          <hr>
+          <footer>
+            
+            
+              <p class="text-small text-grey-dk-000 mb-0">Copyright &copy; 2020-2021, CONIX Research Center</p>
+            
+
+            
+          </footer>
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+
